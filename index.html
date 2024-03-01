@@ -8,7 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         
-        <title>Piso Salarial</title>
+        <title>Dosimetria</title>
 
         <style>
         .bd-callout {
@@ -35,7 +35,7 @@
 
         <h2 class="my-3 text-center" style="color: gray">Calculadora de Dosimetria</h2>
 
-        <div class="container">
+        <div class="container-fluid">
             
             <!-- tabela de gravidade de infração -->
             <div class="table-responsive">
@@ -153,7 +153,7 @@
                     
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col" class="text-center align-middle">Circuntâncias</th>
+                            <th scope="col" class="text-center align-middle">Agravantes</th>
                             <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
                             <th scope="col" class="text-center align-middle">Selecionar</th>
                         </tr>
@@ -209,7 +209,7 @@
                     
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col" class="text-center align-middle">Circuntâncias</th>
+                            <th scope="col" class="text-center align-middle">Atenuantes</th>
                             <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
                             <th scope="col" class="text-center align-middle">Selecionar</th>
                         </tr>
@@ -286,7 +286,8 @@
 
 
             <div class="bd-callout bd-callout-info">
-                
+
+  
 
                 <div class="d-flex">
                     <p class="d-flex my-1 align-items-center"><strong>Pontuação:</strong></p>         
@@ -479,45 +480,31 @@
 
 
             function calcularMultaAplicada() {
-                // Obter o valor do múltiplo de anuidade
                 var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
-                
-                // Verificar se o valor do múltiplo de anuidade não é 0
+
                 if (multiploAnuidade !== 0) {
-                    // Obter o valor da anuidade base em um determinado ano
                     var valorAnuidadeBase = document.getElementById('valor_anuidade').textContent.trim();
                     
-                    // Verificar se o valor da anuidade base não é "Selecionar"
                     if (valorAnuidadeBase !== 'Selecionar') {
-                        var valorRes198 = parseFloat(document.getElementById('valor_multa_res198').textContent.replace('R$ ', ''));
-                        console.log(valorRes198);
-
-                        // Obter o valor da multa conforme a Resolução 22
+                        var valorMultaRes198 = parseFloat(document.getElementById('valor_multa_res198').textContent.replace('R$ ', ''));
                         var valorMultaRes22 = document.getElementById('valorMultaRes22').value.trim();
-                        
-                        // Verificar se o campo de valor da multa está vazio
+
                         if (valorMultaRes22 === '') {
-                            // Se estiver vazio, definir o valor da multa aplicada como vazio
-                            document.getElementById('multa_aplicada').textContent = '';
+                            // Se o campo da multa conforme a Resolução 22 estiver vazio, considerar o valor da Resolução 198
+                            var multaAplicada = valorMultaRes198;
+                            document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2);
                         } else {
-                            // Se não estiver vazio, fazer o cálculo normalmente
                             valorMultaRes22 = valorMultaRes22.replace(/\./g, '');
                             valorMultaRes22 = valorMultaRes22.replace(',', '.');
                             valorMultaRes22 = parseFloat(valorMultaRes22);
-                            console.log(valorMultaRes22);
                             
-                            // Determinar o menor valor entre a anuidade base e a multa conforme a Resolução 22
-                            var multaAplicada = Math.min(valorRes198, valorMultaRes22);
-
-                            // Exibir o valor da multa aplicada
+                            var multaAplicada = Math.min(valorMultaRes198, valorMultaRes22);
                             document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2);
                         }
                     } else {
-                        // Se o valor da anuidade base for "Selecionar", definir o valor da multa como vazio
                         document.getElementById('multa_aplicada').textContent = '';
                     }
                 } else {
-                    // Se o valor do múltiplo de anuidade for 0, definir o valor da multa como vazio
                     document.getElementById('multa_aplicada').textContent = '';
                 }
             }
@@ -538,25 +525,31 @@
                 });
             });
 
-    // Adicionar event listener para o botão "Novo Cálculo"
-    document.getElementById('novo_calculo').addEventListener('click', function() {
-        // Recarregar a página
-        location.reload();
-    });
+            // Adicionar event listener para o botão "Novo Cálculo"
+            document.getElementById('novo_calculo').addEventListener('click', function() {
+                // Recarregar a página
+                location.reload();
+            });
 
-    // Adicionar um event listener para quando a página for completamente carregada
-    window.onload = function() {
-        // Rolar a página para o topo
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Isso fará a rolagem ser suave
-        });
-    };
+            // Adicionar um event listener para quando a página for completamente carregada
+            window.onload = function() {
+                // Rolar a página para o topo
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Isso fará a rolagem ser suave
+                });
+            };
 
             
             $(document).ready(function() {
             $('#valorMultaRes22').mask('000.000.000.000.000,00', {reverse: true});
             });
+
+            
+            
+            
+
+            
 
 
         </script>
