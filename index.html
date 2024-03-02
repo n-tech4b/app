@@ -619,13 +619,6 @@
                 });
             });
 
-            // Adicionar event listener para chamar a função calcularMultaAplicada sempre que houver uma mudança nos valores
-            var inputs = document.querySelectorAll('input[type="checkbox"], select, #valorMultaRes22');
-            inputs.forEach(function(input) {
-                input.addEventListener('change', function() {
-                    calcularMultaAplicada();
-                });
-            });
 
             // Adicionar event listener para o botão "Novo Cálculo"
             document.getElementById('novo_calculo').addEventListener('click', function() {
@@ -646,15 +639,6 @@
             $(document).ready(function() {
             $('#valorMultaRes22').mask('000.000.000.000.000,00', {reverse: true});
             });
-
-            
-
-            
-            
-            
-
-            
-
 
         </script>
 
