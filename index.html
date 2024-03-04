@@ -414,7 +414,7 @@
                 <div class="d-flex">
                     <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme Resolução nº 22:</strong></p>         
                     <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p> 
-                    <input type="text" style="width: 250px; height: 30px;" class="form-control" id="valorMultaRes22" value="123,00" placeholder="Se necessário, informe o valor..."> 
+                    <input type="text" style="width: 250px; height: 30px;" class="form-control" id="valorMultaRes22" value="" placeholder="Se necessário, informe o valor..."> 
                 </div>    
                 
                 <div class="d-flex">
@@ -460,7 +460,7 @@
                     }
                 });
         
-                // Exibir a soma no elemento h3
+                // Exibir a soma no elemento
                 document.getElementById('soma_pontuacao').textContent = soma;
             }
         
@@ -539,8 +539,8 @@
                     document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em ' + anoSelecionado + ' (ano da Notificação Preventiva): ';
                 } else {
                     // Se o ano selecionado não estiver presente no objeto de valores da anuidade, exibir uma mensagem de erro
-                    document.getElementById('valor_anuidade').textContent = 'Selecionar';
-                    document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em (ano da Notificação Preventiva):';
+                    document.getElementById('valor_anuidade').textContent = 'Erro';
+                    document.getElementById('ano_notificacao').textContent = 'Erro';
                 }
             }
 
