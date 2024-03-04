@@ -414,7 +414,7 @@
                 <div class="d-flex">
                     <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme Resolução nº 22:</strong></p>         
                     <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p> 
-                    <input type="text" style="width: 100px; height: 30px;" class="form-control" id="valorMultaRes22" value=123,00 > 
+                    <input type="text" style="width: 250px; height: 30px;" class="form-control" id="valorMultaRes22" value="" placeholder="Se necessário, informe o valor"> 
                 </div>    
                 
                 <div class="d-flex">
@@ -477,7 +477,7 @@
             function calcularMultiploAnuidade(somaPontuacao) {
                 // Se a pontuação for menor que 1, o múltiplo será 0
                 if (somaPontuacao < 1) {
-                    return 0;
+                    return 1;
                 }
 
                 // Verificar se a somaPontuacao é maior que 19, se sim, retornar 10
