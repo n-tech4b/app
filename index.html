@@ -36,407 +36,401 @@
         <h2 class="my-3 text-center" style="color: gray">Calculadora de Dosimetria</h2>
 
         <div class="container-fluid">
+
+            <div class="row">   
+                <div class="col">
             
-            <!-- tabela de gravidade de infração -->
-            <div class="table-responsive">
+                    <!-- tabela de gravidade de infração -->
+                    <div class="table-responsive">
 
-                <h3 class="m-2" style="color: gray">Gravidade da Infração:</h3>
+                        <h3 class="m-2" style="color: gray">Gravidade da Infração:</h3>
 
-                <table class="table table-sm table-hover">
-                    
-                    <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
-                        <tr>
-                            <th scope="col" class="text-center align-middle">Inciso</th>
-                            <th scope="col" class="align-middle">Infração</th>
-                            <th scope="col" class="text-center align-middle">Gravidade</th>
-                            <th scope="col" class="text-center align-middle">Pontuação Mínima</th>
-                            <th scope="col" class="text-center align-middle">Selecionar</th>
-                        </tr>
-                    </thead>
+                        <table class="table table-sm table-hover" id="tabela_gravidade_infra">
+                            
+                            <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
+                                <tr>
+                                    <th scope="col" class="text-center align-middle" >Inciso</th>
+                                    <th scope="col" class="align-middle">Infração</th>
+                                    <th scope="col" class="text-center align-middle">Gravidade</th>
+                                    <th scope="col" class="text-center align-middle">Pontuação Mínima</th>
+                                    <th scope="col" class="text-center align-middle">Selecionar</th>
+                                </tr>
+                            </thead>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">I</th>
-                            <td class="align-middle">Exercício ilegal da profissão PF</td>
-                            <td  class="text-center align-middle">Gravíssima</td>
-                            <td  class="text-center align-middle">13</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input" id="gravidade-item1" data-text="">
-                            </td>
-                        </tr>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">I</th>
+                                    <td class="align-middle">Exercício ilegal da profissão PF</td>
+                                    <td  class="text-center align-middle">Gravíssima</td>
+                                    <td  class="text-center align-middle">13</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input" id="gravidade-item1" data-text="">
+                                    </td>
+                                </tr>
 
-                        <tr>
-                            <th scope="row" class="text-center align-middle">II</th>
-                            <td class="align-middle">Exercício ilegal da profissão PJ</td>
-                            <td  class="text-center align-middle">Gravíssima</td>
-                            <td  class="text-center align-middle">13</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input align-middle" id="gravidade-item2" data-text="" >
-                            </td>
-                        </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">II</th>
+                                    <td class="align-middle">Exercício ilegal da profissão PJ</td>
+                                    <td  class="text-center align-middle">Gravíssima</td>
+                                    <td  class="text-center align-middle">13</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input align-middle" id="gravidade-item2" data-text="" >
+                                    </td>
+                                </tr>
 
-                        <tr>
-                            <th scope="row" class="text-center align-middle">III</th>
-                            <td class="align-middle">Exercício irregular da profissão PF</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item3" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">IV</th>
-                            <td class="align-middle">Exercício irregular da profissão PJ</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item4" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">V</th>
-                            <td class="align-middle">Ausência de responsável técnico para a atividade PF e PJ</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item5" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">VI</th>
-                            <td class="align-middle">Ausência de responsável técnico registrado PJ</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item6" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">VII</th>
-                            <td class="align-middle">Obstrução de atos da fiscalização</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item7" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">VIII</th>
-                            <td class="align-middle">Sonegação de informação</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item8" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">IX</th>
-                            <td class="align-middle">Utilização irregular dos termos “Arquitetura” ou “Urbanismo”</td>
-                            <td  class="text-center align-middle">Grave</td>
-                            <td  class="text-center align-middle">10</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item9" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">X</th>
-                            <td class="align-middle">Ausência ou utilização irregular de placa</td>
-                            <td  class="text-center align-middle">Média</td>
-                            <td  class="text-center align-middle">4</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item10" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">XI</th>
-                            <td class="align-middle">Publicidade em desacordo com o registro da atividade</td>
-                            <td  class="text-center align-middle">Leve</td>
-                            <td  class="text-center align-middle">1</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item11" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">XII</th>
-                            <td class="align-middle">Omissão de responsável técnico em publicação</td>
-                            <td  class="text-center align-middle">Leve</td>
-                            <td  class="text-center align-middle">1</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item12" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">XIII</th>
-                            <td class="align-middle">RRT registrado em desacordo</td>
-                            <td  class="text-center align-middle">Leve</td>
-                            <td  class="text-center align-middle">1</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="gravidade-item13" data-text="" >
-                            </td>
-                        </tr>
-
-
-  
-                    </tbody>
-                </table>
-
-            </div>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">III</th>
+                                    <td class="align-middle">Exercício irregular da profissão PF</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item3" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">IV</th>
+                                    <td class="align-middle">Exercício irregular da profissão PJ</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item4" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">V</th>
+                                    <td class="align-middle">Ausência de responsável técnico para a atividade PF e PJ</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item5" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">VI</th>
+                                    <td class="align-middle">Ausência de responsável técnico registrado PJ</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item6" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">VII</th>
+                                    <td class="align-middle">Obstrução de atos da fiscalização</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item7" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">VIII</th>
+                                    <td class="align-middle">Sonegação de informação</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item8" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">IX</th>
+                                    <td class="align-middle">Utilização irregular dos termos “Arquitetura” ou “Urbanismo”</td>
+                                    <td  class="text-center align-middle">Grave</td>
+                                    <td  class="text-center align-middle">10</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item9" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">X</th>
+                                    <td class="align-middle">Ausência ou utilização irregular de placa</td>
+                                    <td  class="text-center align-middle">Média</td>
+                                    <td  class="text-center align-middle">4</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item10" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">XI</th>
+                                    <td class="align-middle">Publicidade em desacordo com o registro da atividade</td>
+                                    <td  class="text-center align-middle">Leve</td>
+                                    <td  class="text-center align-middle">1</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item11" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">XII</th>
+                                    <td class="align-middle">Omissão de responsável técnico em publicação</td>
+                                    <td  class="text-center align-middle">Leve</td>
+                                    <td  class="text-center align-middle">1</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item12" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">XIII</th>
+                                    <td class="align-middle">RRT registrado em desacordo</td>
+                                    <td  class="text-center align-middle">Leve</td>
+                                    <td  class="text-center align-middle">1</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="gravidade-item13" data-text="" >
+                                    </td>
+                                </tr>
 
 
-            <!-- tabela grau de impacto -->
-            <div class="table-responsive">
+        
+                            </tbody>
+                        </table>
 
-                <h3 class="m-2" style="color: gray">Grau de Impacto:</h3>
-    
-                <table class="table table-sm table-hover">
-                    
-                    <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
-                        <tr>
-                            <th scope="col" class="text-center align-middle">Atividade Realizada Em</th>
-                            <th scope="col">Grau de Impacto</th>
-                            <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
-                            <th scope="col" class="text-center align-middle">Selecionar</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Área de preservação ambiental</th>
-                            <td class="text-center align-middle">Altíssimo</td>
-                            <td  class="text-center align-middle">6</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="impacto-item1" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Edificação ou área protegida ou tombada</th>
-                            <td class="text-center align-middle"> Altíssimo</td>
-                            <td  class="text-center align-middle">6</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="impacto-item2" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Edificação, equipamento ou área de uso público (institucional, comunitário, dentre outras.)</th>
-                            <td class="text-center align-middle">Alto</td>
-                            <td  class="text-center align-middle">4</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="impacto-item3" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Edificação de uso coletivo (multifamiliar, comercial, misto ou serviços, dentre outras.)</th>
-                            <td class="text-center align-middle">Médio</td>
-                            <td  class="text-center align-middle">3</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="impacto-item4" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Edificação de uso unifamiliar</th>
-                            <td class="text-center align-middle">Baixo</td>
-                            <td  class="text-center align-middle">1</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="impacto-item5" data-text="" >
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-    
-            </div>
-
-            <!-- tabela Circunstâncias Agravantes -->
-            <div class="table-responsive">
-
-                <h3 class="m-2" style="color: gray">Circunstâncias Agravantes:</h3>
-    
-                <table class="table table-sm table-hover">
-                    
-                    <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
-                        <tr>
-                            <th scope="col" class="text-center align-middle">Agravantes</th>
-                            <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
-                            <th scope="col" class="text-center align-middle">Selecionar</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Sem reincidência</th>
-                            <td class="text-center align-middle">0</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="agravantes-item1" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">1ª Reincidência</th>
-                            <td class="text-center align-middle">2</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="agravantes-item2" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">2ª Reincidência</th>
-                            <td class="text-center align-middle">4</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="agravantes-item3" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">3ª Reincidência</th>
-                            <td class="text-center align-middle">6</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="agravantes-item4" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Conselheiro ou funcionário do CAU/BR ou CAU/UF</th>
-                            <td class="text-center align-middle">6</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="agravantes-item5" data-text="" >
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-    
-            </div>
-
-            <!-- tabela Circunstâncias Atenuantes -->
-            <div class="table-responsive">
-
-                <h3 class="m-2" style="color: gray">Circunstâncias Atenuantes:</h3>
-    
-                <table class="table table-sm table-hover">
-                    
-                    <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
-                        <tr>
-                            <th scope="col" class="text-center align-middle">Atenuantes</th>
-                            <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
-                            <th scope="col" class="text-center align-middle">Selecionar</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Comprovar insuficiência econômica da PF ou PJ</th>
-                            <td class="text-center align-middle">-2</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="atenuantes-item1" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="d-flex justify-content-center align-items-center">Cometer infração sob coação, ou em cumprimento de ordem de autoridade superior, provocada por ato irregular de outrem</th>
-                            <td class="text-center align-middle">-3</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="atenuantes-item2" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Praticar o fato por relevante valor social</th>
-                            <td class="text-center align-middle">-3</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="atenuantes-item3" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Reparar eventuais danos antes do julgamento pela CEP-CAU/UF</th>
-                            <td class="text-center align-middle">-4</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="atenuantes-item4" data-text="" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-center align-middle">Eliminar o fato gerador do auto de infração</th>
-                            <td class="text-center align-middle">-5</td>
-                            <td class="text-center">
-                                <input type="checkbox" class="form-check-input text-center" id="atenuantes-item5" data-text="" >
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-    
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <div class="input-group my-3 d-flex justify-content-center" style="width: 500px;">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Ano da Notificação Preventiva</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Selecionar</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                    </select>
+
+
+                    <!-- tabela grau de impacto -->
+                    <div class="table-responsive">
+
+                        <h3 class="m-2" style="color: gray">Grau de Impacto:</h3>
+            
+                        <table class="table table-sm table-hover" id="tabela_grau_impacto">
+                            
+                            <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
+                                <tr>
+                                    <th scope="col" class="text-center align-middle">Atividade Realizada Em</th>
+                                    <th scope="col">Grau de Impacto</th>
+                                    <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
+                                    <th scope="col" class="text-center align-middle">Selecionar</th>
+                                </tr>
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Área de preservação ambiental</th>
+                                    <td class="text-center align-middle">Altíssimo</td>
+                                    <td  class="text-center align-middle">6</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="impacto-item1" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Edificação ou área protegida ou tombada</th>
+                                    <td class="text-center align-middle"> Altíssimo</td>
+                                    <td  class="text-center align-middle">6</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="impacto-item2" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Edificação, equipamento ou área de uso público (institucional, comunitário, dentre outras.)</th>
+                                    <td class="text-center align-middle">Alto</td>
+                                    <td  class="text-center align-middle">4</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="impacto-item3" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Edificação de uso coletivo (multifamiliar, comercial, misto ou serviços, dentre outras.)</th>
+                                    <td class="text-center align-middle">Médio</td>
+                                    <td  class="text-center align-middle">3</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="impacto-item4" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Edificação de uso unifamiliar</th>
+                                    <td class="text-center align-middle">Baixo</td>
+                                    <td  class="text-center align-middle">1</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="impacto-item5" data-text="" >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+            
+                    </div>
+
+                    <!-- tabela Circunstâncias Agravantes -->
+                    <div class="table-responsive">
+
+                        <h3 class="m-2" style="color: gray">Circunstâncias Agravantes:</h3>
+            
+                        <table class="table table-sm table-hover">
+                            
+                            <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
+                                <tr>
+                                    <th scope="col" class="text-center align-middle">Agravantes</th>
+                                    <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
+                                    <th scope="col" class="text-center align-middle">Selecionar</th>
+                                </tr>
+                            </thead>
+            
+                            <tbody>
+
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">1ª Reincidência</th>
+                                    <td class="text-center align-middle">2</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="agravantes-item2" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">2ª Reincidência</th>
+                                    <td class="text-center align-middle">4</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="agravantes-item3" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">3ª Reincidência</th>
+                                    <td class="text-center align-middle">6</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="agravantes-item4" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Conselheiro ou funcionário do CAU/BR ou CAU/UF</th>
+                                    <td class="text-center align-middle">6</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="agravantes-item5" data-text="" >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+            
+                    </div>
+
+                    <!-- tabela Circunstâncias Atenuantes -->
+                    <div class="table-responsive">
+
+                        <h3 class="m-2" style="color: gray">Circunstâncias Atenuantes:</h3>
+            
+                        <table class="table table-sm table-hover">
+                            
+                            <thead class="thead" style="background-color: #14385d; color: #fdfdfd;">
+                                <tr>
+                                    <th scope="col" class="text-center align-middle">Atenuantes</th>
+                                    <th scope="col" class="text-center align-middle">Pontuação Cumulativa</th>
+                                    <th scope="col" class="text-center align-middle">Selecionar</th>
+                                </tr>
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Comprovar insuficiência econômica da PF ou PJ</th>
+                                    <td class="text-center align-middle">-2</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="atenuantes-item1" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="d-flex justify-content-center align-items-center">Cometer infração sob coação, ou em cumprimento de ordem de autoridade superior, provocada por ato irregular de outrem</th>
+                                    <td class="text-center align-middle">-3</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="atenuantes-item2" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Praticar o fato por relevante valor social</th>
+                                    <td class="text-center align-middle">-3</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="atenuantes-item3" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Reparar eventuais danos antes do julgamento pela CEP-CAU/UF</th>
+                                    <td class="text-center align-middle">-4</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="atenuantes-item4" data-text="" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-center align-middle">Eliminar o fato gerador do auto de infração</th>
+                                    <td class="text-center align-middle">-5</td>
+                                    <td class="text-center">
+                                        <input type="checkbox" class="form-check-input text-center" id="atenuantes-item5" data-text="" >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+            
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="input-group my-3 d-flex justify-content-center" style="width: 500px;">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Ano da Notificação Preventiva</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Selecionar</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                            </select>
+                        </div>
+
+                        
+                    </div>
+            
+
+
+                    <div class="bd-callout bd-callout-info">
+
+                        <h2 class="text-center" style="color: gray">Resumo da Dosimetria:</h2>
+
+        
+
+                        <div class="d-flex">
+                            <p class="d-flex my-1 align-items-center"><strong>Pontuação:</strong></p>         
+                            <p class="d-flex my-1 align-items-center ml-2" id="soma_pontuacao">0</p>    
+                        </div> 
+                        
+                        <div class="d-flex">
+                            <p class="d-flex my-1 align-items-center"><strong>Múltiplo de anuidade:</strong></p>         
+                            <p class="d-flex my-1 align-items-center ml-2" id="multiplo_anuidade">1</p>   
+                        </div> 
+
+
+                        
+                        <div class="d-flex">
+                            <p class="d-flex my-1 align-items-center" style="font-weight: bold;" id="ano_notificacao">Valor da anuidade base (ano da Notificação Preventiva):</p>         
+                            <p class="d-flex my-1 align-items-center ml-2" id="valor_anuidade">Selecionar</p>     
+                        </div> 
+                        
+
+                        <hr>
+                        
+                        
+                        <div class="d-flex">
+                            <p class="d-flex my-1 align-items-center"><strong>Valor total da multa, conforme Resolução nº 198:</strong></p>         
+                            <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res198"></p>  
+                        </div>       
+                        
+
+
+
+                    </div>
+
                 </div>
 
+
                 
             </div>
-     
 
-
-            <div class="bd-callout bd-callout-info">
-
-                <h2 class="text-center" style="color: gray">Resumo da Dosimetria:</h2>
-
-  
-
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center"><strong>Pontuação:</strong></p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="soma_pontuacao">0</p>    
-                </div> 
-                
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center"><strong>Múltiplo de anuidade:</strong></p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="multiplo_anuidade">1</p>   
-                </div> 
-
-                <hr>
-                
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center" style="font-weight: bold;" id="ano_notificacao">Valor da anuidade base (ano da Notificação Preventiva):</p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="valor_anuidade">Selecionar</p>     
-                </div> 
-                
-
-                <hr>
-                
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme Resolução nº 22:</strong></p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p> 
-                    <input type="text" style="width: 250px; height: 30px;" class="form-control" id="valorMultaRes22" value="" placeholder="Se necessário, informe o valor..."> 
-                </div>    
-                
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center"><strong>Valor total da multa, conforme Resolução nº 198:</strong></p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res198"></p>  
-                </div>       
-                
-                <hr>
-                <div class="d-flex">
-                    <p class="d-flex my-1 align-items-center"><strong>Multa a ser aplicada:</strong></p>         
-                    <p class="d-flex my-1 align-items-center ml-2" id="multa_aplicada"></p>     
-                </div>  
+            <div class="d-flex justify-content-center mt-3 mb-5">
+                <button class="btn btn-secondary font-weight-bold" id="novo_calculo">Novo Cálculo</button>
 
             </div>
 
         </div>
-
-        <div class="d-flex justify-content-center mt-3 mb-5">
-            <button class="btn btn-secondary font-weight-bold" id="novo_calculo">Novo Cálculo</button>
-
-        </div>
-
 
         <!-- JavaScript (Opcional) -->
         <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -447,6 +441,37 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
         <script>
+
+            // Adicione um event listener para as checkboxes da tabela "Gravidade da Infração"
+            var gravidadeCheckboxes = document.querySelectorAll('#tabela_gravidade_infra input[type="checkbox"]');
+            gravidadeCheckboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    // Se esta checkbox foi marcada
+                    if (checkbox.checked) {
+                        // Percorra todas as checkboxes na tabela "Gravidade da Infração"
+                        gravidadeCheckboxes.forEach(function(otherCheckbox) {
+                            // Desmarque as outras checkboxes, exceto a atualmente selecionada
+                            if (otherCheckbox !== checkbox) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+
+            var impactoCheckboxes = document.querySelectorAll('#tabela_grau_impacto input[type="checkbox"]');
+            impactoCheckboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    if (checkbox.checked) {
+                        impactoCheckboxes.forEach(function(otherCheckbox) {
+                            if (otherCheckbox !== checkbox) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+
 
             
             // Função para calcular e exibir a soma dos valores dos checkboxes selecionados
@@ -539,8 +564,8 @@
                     document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em ' + anoSelecionado + ' (ano da Notificação Preventiva): ';
                 } else {
                     // Se o ano selecionado não estiver presente no objeto de valores da anuidade, exibir uma mensagem de erro
-                    document.getElementById('valor_anuidade').textContent = 'Erro';
-                    document.getElementById('ano_notificacao').textContent = 'Erro';
+                    document.getElementById('valor_anuidade').textContent = '';
+                    document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em (ano da Notificação Preventiva): ';
                 }
             }
 
@@ -581,43 +606,6 @@
             });
 
 
-            function calcularMultaAplicada() {
-                var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
-
-                if (multiploAnuidade !== 0) {
-                    var valorAnuidadeBase = document.getElementById('valor_anuidade').textContent.trim();
-                    
-                    if (valorAnuidadeBase !== 'Selecionar') {
-                        var valorMultaRes198 = parseFloat(document.getElementById('valor_multa_res198').textContent.replace('R$ ', ''));
-                        var valorMultaRes22 = document.getElementById('valorMultaRes22').value.trim();
-
-                        if (valorMultaRes22 === '') {
-                            // Se o campo da multa conforme a Resolução 22 estiver vazio, considerar o valor da Resolução 198
-                            var multaAplicada = valorMultaRes198;
-                            document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2);
-                        } else {
-                            valorMultaRes22 = valorMultaRes22.replace(/\./g, '');
-                            valorMultaRes22 = valorMultaRes22.replace(',', '.');
-                            valorMultaRes22 = parseFloat(valorMultaRes22);
-                            
-                            var multaAplicada = Math.min(valorMultaRes198, valorMultaRes22);
-                            document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2);
-                        }
-                    } else {
-                        document.getElementById('multa_aplicada').textContent = '';
-                    }
-                } else {
-                    document.getElementById('multa_aplicada').textContent = '';
-                }
-            }
-
-            // Adicionar event listener para chamar a função calcularMultaAplicada sempre que houver uma mudança nos valores
-            var inputs = document.querySelectorAll('input[type="checkbox"], select, #valorMultaRes22');
-            inputs.forEach(function(input) {
-                input.addEventListener('change', function() {
-                    calcularMultaAplicada();
-                });
-            });
 
 
             // Adicionar event listener para o botão "Novo Cálculo"
