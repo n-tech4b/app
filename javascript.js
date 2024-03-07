@@ -236,14 +236,14 @@ document.addEventListener('DOMContentLoaded', function() {
         location.reload();
     });
 
-    // // Adicionar um event listener para quando a página for completamente carregada
-    // window.onload = function() {
-    //     // Rolar a página para o topo
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth' // Isso fará a rolagem ser suave
-    //     });
-    // };
+    // Adicionar um event listener para quando a página for completamente carregada
+    window.onload = function() {
+        // Rolar a página para o topo
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Isso fará a rolagem ser suave
+        });
+    };
 
     const copyButton = document.getElementById('copiar_tabela');
     copyButton.addEventListener('click', function() {
