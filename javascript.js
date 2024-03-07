@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.getSelection().addRange(range);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        alert('Tabela foi copiada com sucesso.');
+        alert('Tabela copiada com sucesso.');
     });
 
     // Adicionando evento de escuta aos checkboxes da tabela de gravidade de infração
