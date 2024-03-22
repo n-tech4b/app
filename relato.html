@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-n7wI/vzvVQnjnUEC3st5yPtRiHI94vLeA6hR2b/zsGQrPeZUZX7QOcCc2nyHNk7bZjQq29aIojfRtJtXjz/vbg==" crossorigin="anonymous" /> -->
+        <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+
+
+        <title>Relato</title>
+        
+        <style>
+
+
+        </style>
+
+    </head>
+
+    <body class="">
+
+        
+            
+        <!--------------------------------------- nav superior ---------------------------------------->
+        
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+            <div class="container-fluid">
+                
+                <a class="navbar-brand ml-3" href="#"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 25px;">
+                        <!-- Path do ícone -->
+                        <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V428.7c-2.7 1.1-5.4 2-8.2 2.7l-60.1 15c-3 .7-6 1.2-9 1.4c-.9 .1-1.8 .2-2.7 .2H240c-6.1 0-11.6-3.4-14.3-8.8l-8.8-17.7c-1.7-3.4-5.1-5.5-8.8-5.5s-7.2 2.1-8.8 5.5l-8.8 17.7c-2.9 5.9-9.2 9.4-15.7 8.8s-12.1-5.1-13.9-11.3L144 381l-9.8 32.8c-6.1 20.3-24.8 34.2-46 34.2H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h8.2c7.1 0 13.3-4.6 15.3-11.4l14.9-49.5c3.4-11.3 13.8-19.1 25.6-19.1s22.2 7.8 25.6 19.1l11.6 38.6c7.4-6.2 16.8-9.7 26.8-9.7c15.9 0 30.4 9 37.5 23.2l4.4 8.8h8.9c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7L384 203.6V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM549.8 139.7c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM311.9 321c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4L512.1 262.7l-71-71L311.9 321z"/>
+                    </svg>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="textoNavbar">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tipo de Relato
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Ausência de Registro no CAU PJ</a>
+                                <a class="dropdown-item" href="#">Exercício ilegal da profissão PF</a>
+                                <a class="dropdown-item" href="#">Exercício ilegal da profissão PJ</a>
+                                <a class="dropdown-item" href="#">Ausência de responsável técnico para a atividade PF e PJ</a>
+                                <a class="dropdown-item" href="#">Obstrução de atos da fiscalização</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="">Modelos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://n-tech4b.github.io/app/" target="_blank">Calculador de dosimetria</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="">Resoluções</a>
+                        </li>
+                    </ul>
+
+                </div>
+            
+            </div>
+        </nav>
+
+        <!--------------------------------------- Relato  ---------------------------------------->
+
+        <div class="container my-4 border" id="div_cabecalho">
+
+   
+            <fieldset class="border p-2">
+
+                <legend class="w-auto">Dados do Processo</legend>
+
+                <table id="tab_cabecalho">
+
+                    <tr>
+                        <td>PROCESSO:</td>
+                        <td><input type="text" id="num_processo" placeholder="Nº do processo-Índice." style="width: 350px;"></td>
+                    </tr>
+
+                    <tr>
+                        <td>INTERESSADO:</td>
+                        <td><input type="text" placeholder="Interessado." style="width: 350px;"></td>
+                    </tr>
+
+                    <tr>
+                        <td>ASSUNTO:</td>
+                        <td><input type="text" placeholder="Ausência de registro no CAU (PJ)." style="width: 350px;" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td>RELATOR:</td>
+                        <td><input type="text" placeholder="Conselheiro/a relator/a." style="width: 350px;"></td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        
+        </div>
+
+        <div class="container mt-4 border" id="div_historico">
+
+
+            <fieldset class="border p-2">
+                
+                <legend class="w-auto">Histórico do Processo</legend>
+               
+
+                <label class="mb-3" for="" id="lab_resumo_fatos"><strong>Resumo dos fatos:</strong></label>      
+                <textarea class="my-1"  id="area_resumo_fatos" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Pode ser em texto corrido ou em tópicos, indicando o documento e a data de sua emissão."></textarea>
+
+
+                <label class="my-3" for="" id="lab_origem_demanda"><strong>Origem da demanda:</strong></label>
+                <p class="my-1" id="p_origem_demanda">
+
+                    <span id="span_origem_demanda_1" contenteditable="true">Trata-se de processo de fiscalização iniciado a partir de</span>
+                
+
+                    <!-- [lista suspensa]  -->
+                    <select  id="select_origem_demanda" contenteditable="true">
+                        <option value="">Selecione</option>
+                        <option value="">DENÚNCIA</option>
+                        <option value="">DILIGÊNCIA</option>
+                        <option value="">ROTINA</option>
+                    </select>
+
+                    <span id="span_origem_demanda_2" contenteditable="true">da Fiscalização de REGIONAL</span>
+                    
+                    <!-- [lista suspensa],  -->
+                    <select id="select_regional" >
+                        <option value="">Selecione</option>
+                        <option value="">São Paulo</option>
+                        <option value="">Bauru</option>
+                        <option value="">Campinas</option>
+                        <option value="">Mogi das Cruzes</option>
+                        <option value="">Presidente Prudente</option>
+                        <option value="">Ribeirão Preto</option>
+                        <option value="">Santos</option>
+                        <option value="">ABC</option>
+                        <option value="">São José dos Campos</option>
+                        <option value="">São José do Rio Preto</option>
+                        <option value="">Sorocaba</option>
+                    </select>
+
+                </p>
+
+                <label class="my-3" for="" id="lab_irregularidade"><strong>Irregularidade:</strong></label>
+                <textarea class="my-1"  id="area_irregularidade" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Campo a ser preenchido manualmente pelo relator"></textarea>
+
+
+                <label class="my-3" for="" id="lab_dt_relatorio_fisc"><strong>Data do Relatório de Fiscalização:</strong></label>
+                <p class="my-1" id="p_dt_relatorio_fisc">
+                    
+                    <span id="span_dt_relatorio_fisc">O Relatório de Fiscalização com o registro da ação fiscalizatória ocorreu em </span>
+
+                    <!-- data  -->
+                    <input type="text" id="input_dt_relatorio_fisc" placeholder="DD/MM/AAAA"> 
+
+                </p>
+
+                            
+                <label class="my-3" for="" id="lab_dt_notificacao_preventiva"><strong>Data da Notificação Preventiva:</strong></label>
+                <p class="my-1" id="p_dt_notificacao_preventiva">
+                    
+                    <span id="span_dt_notificacao_preventiva">A Notificação Preventiva foi emitida em </span>
+                    
+                    <!-- [DATA]  -->
+                    <input type="date" id="input_dt_notificacao_preventiva" >
+
+                </p>
+
+
+                <label class="my-3" for="" id="lab_devolucao_corresp"><strong>Houve devolução de correspondência?</strong></label><span style="color: red;">&nbsp;(da Notificação Preventiva)</span>
+                <div id="div_devolucao_corresp">
+                    <input type="checkbox" id="input_devolucao_corresp_sim" >
+                    <label for="input_devolucao_corresp_sim" id="lab_devolucao_corresp_sim">Sim</label>
+                
+                    <input type="checkbox" id="input_devolucao_corresp_nao">
+                    <label for="input_devolucao_corresp_nao" id="lab_devolucao_corresp_nao">Não</label>
+                </div>
+                
+                <div class="border" id="div_corresp_devolvida_sim" style="display: none;">
+                    
+                    <span id="span_corresp_devolvida_sim_1">Houve</span>
+                    
+                    <!-- tentativas -->
+                    <input type="number" id="input_corresp_devolvida_sim_1" placeholder="Número de tentativas..." style="width: 200px;">
+                    
+                    <span id="span_corresp_devolvida_sim_2">tentativas de envio, sendo enviada novamente</span>
+                    
+                    <!-- opções de meio de envio -->
+                    <select id="select_corresp_devolvida_sim" name="select_corresp_devolvida_sim" >
+                        <option value="cienciaPessoal">Por ciência pessoal</option>
+                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
+                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">Por telegrama</option>
+                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                    </select>
+
+                    <span id="span_corresp_devolvida_sim_3">, havendo ciência em</span>
+                    
+                    <!-- data ciencia -->
+                    <input type="date" id="input_corresp_devolvida_sim_2" id="dataCienciaSim" >
+                    
+                    <br><br>
+
+                </div>
+                
+                <div class="border" id="div_corresp_devolvida_nao" style="display: none;">
+                    
+                    <span id="span_corresp_devolvida_nao_1">A Notificação foi enviada </span>
+                    
+                    <!-- meio de envio -->
+                    <select id="select_corresp_devolvida_nao" name="select_corresp_devolvida_nao" >
+                        <option value="cienciaPessoal">Por ciência pessoal</option>
+                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
+                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">Por telegrama</option>
+                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                    </select>
+
+                    <span id="span_corresp_devolvida_nao_2">, havendo ciência em </span>
+                    
+                    <!-- data ciencia -->
+                    <input type="date" id="input_corresp_devolvida_nao_1" >
+
+                    <br><br>
+
+                </div>
+
+
+                <div id="div_notificacao_preventiva">
+                    
+                    <input type="checkbox" id="input_notificacao_preventiva"  data-toggle="collapse" data-target="#div_notificacao_preventiva_checked" value="">
+                    <label class="my-3" id="lab_notificacao_preventiva" for="input_notificacao_preventiva"><strong>Houve contestação da Notificação Preventiva?</strong></label>
+
+                    <div class="collapse border" id="div_notificacao_preventiva_checked">
+                        
+                        <span id="span_notificacao_preventiva_checked_1">Em</span>
+                    
+                        <!-- data contestacao -->          
+                        <input type="date" id="input_notificacao_preventiva_checked" >
+        
+                        <span id="span_notificacao_preventiva_checked_2">, o interessado apresentou contestação da Notificação Preventiva, que não foi aceita pela Fiscalização.</span>
+                        
+                    </div>
+
+                </div>
+
+                <div id="div_tentativa_regularizacao">
+
+                    <input type="checkbox" id="input_tentativa_regularizacao"  data-toggle="collapse" data-target="#div_tentativa_regularizacao_checked" value="">
+
+                    <label class="my-3" id="lab_tentativa_regularizacao" for="input_tentativa_regularizacao"><strong>Houve tentativa de regularização?</strong></label>
+                   
+
+                    <div class="collapse border" id="div_tentativa_regularizacao_checked">
+                        <textarea id="area_tentativa_regularizacao" class="my-1"  id="" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Texto a ser preenchido pelo relator."></textarea>
+
+                    </div>
+                
+                </div>
+
+                <label class="my-3" id="lab_dt_auto" for=""><strong>Data do Auto de Infração:</strong></label>
+
+                <p class="my-1" id="p_dt_auto">
+                    
+                    <span id="span_dt_auto">O Auto de Infração foi lavrado em</span>
+                    
+                    <!-- data auto lavrado  -->
+                    <input type="date" id="input_dt_auto" >
+
+
+                </p>
+
+                <label class="my-3" for="" id="lab_devolucao_corresp_auto"><strong>Houve devolução de correspondência?</strong></label><span style="color: red;">&nbsp;(do Auto de Infração)</span>
+                <div id="div_devolucao_corresp_auto">
+                    <input type="checkbox" id="input_devolucao_corresp_auto_sim" >
+                    <label for="input_devolucao_corresp_auto_sim" id="lab_devolucao_corresp_auto_sim">Sim</label>
+                
+                    <input type="checkbox" id="input_devolucao_corresp_auto_nao">
+                    <label for="input_devolucao_corresp_auto_nao" id="lab_devolucao_corresp_auto_nao">Não</label>
+                </div>
+                
+                <div class="border" id="div_corresp_auto_devolvida_sim" style="display: none;">
+                    
+                    <span id="span_corresp_auto_devolvida_sim_1">Houve</span>
+                    
+                    <!-- tentativas -->
+                    <input type="number" id="input_corresp_auto_devolvida_sim_1" placeholder="Número de tentativas..." style="width: 200px;">
+                    
+                    <span id="span_corresp_devolvida_sim_2">tentativas de envio, sendo enviada novamente</span>
+                    
+                    <!-- opções de meio de envio -->
+                    <select id="select_corresp_auto_devolvida_sim" name="select_corresp_auto_devolvida_sim" >
+                        <option value="cienciaPessoal">Por ciência pessoal</option>
+                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
+                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">Por telegrama</option>
+                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                    </select>
+
+                    <span id="span_corresp_devolvida_auto_sim_3">, havendo ciência em</span>
+                    
+                    <!-- data ciencia -->
+                    <input type="date" id="input_corresp_auto_devolvida_sim_2">
+                    
+                    <br><br>
+
+                </div>
+                
+                <div class="border" id="div_corresp_auto_devolvida_nao" style="display: none;">
+                    
+                    <span id="span_corresp_auto_devolvida_nao_1">A Notificação foi enviada </span>
+                    
+                    <!-- meio de envio -->
+                    <select id="select_corresp_auto_devolvida_nao" name="select_corresp_auto_devolvida_nao" >
+                        <option value="cienciaPessoal">Por ciência pessoal</option>
+                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
+                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">Por telegrama</option>
+                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                    </select>
+
+                    <span id="span_corresp_auto_devolvida_nao_2">, havendo ciência em </span>
+                    
+                    <!-- data ciencia -->
+                    <input type="date" id="input_corresp_auto_devolvida_nao_1" >
+
+                    <br><br>
+
+                </div>
+
+
+
+
+                
+        
+
+                <div id="div_encaminhamento">
+
+                    <label class="my-3" id="lab_encaminhamento" for=""><strong>Encaminhamento de processo:</strong></label>
+                    
+                    <div class="" id="div_processo_revelia">
+
+                        <input type="checkbox" id="input_processo_revelia"  data-toggle="collapse" data-target="#div_processo_revelia_checked" value="">
+                        <label id="lab_processo_revelia" for="input_processo_revelia">Processo à Revelia.</label>
+
+                        <div class="collapse border" id="div_processo_revelia_checked">
+                            <span id="span_processo_revelia">Não houve manifestação por parte do interessado, seguindo o processo à revelia</span>
+                        </div>
+
+                    </div>
+
+     
+                    <div class="mt-2" id="div_processo_regularizado">
+                        <input type="checkbox" id="input_processo_regularizado"  data-toggle="collapse" data-target="#div_processo_regularizado_checked" value="">
+                        <label id="lab_processo_regularizado" for="input_processo_regularizado">Processo regularizado.</label>
+
+                        <div class="collapse border" id="div_processo_regularizado_checked">
+                            
+                            <span id="span_processo_regularizado_checked_1">Em</span>
+                
+                            <!-- data ciencia -->
+                            <input type="date" id="input_processo_regularizado_checked" >
+
+                            <span id="span_processo_regularizado_checked_2">, houve a regularização do fato gerador </span>
+                            
+                            
+                            <!-- texto a ser preenchido pelo relator -->
+                            <textarea class="my-1"  id="span_processo_regularizado_checked" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="texto a ser preenchido pelo relator"></textarea>
+
+                            <span id="span_processo_regularizado_checked_3">, seguindo o processo para análise da CEP.</span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="mt-2" id="div_processo_com_defesa">
+
+                        <input type="checkbox" id="processo_com_defesa"  data-toggle="collapse" data-target="#div_processo_com_defesa_checked" value="">
+                        <label for="processo_com_defesa">Processo com defesa.</label>
+                        
+                        <div class="collapse border" id="div_processo_com_defesa_checked">
+                            
+                            <span id="span_processo_com_defesa_checked_1">Em</span>
+                            <!-- data defesa  -->
+                            <input type="date" id="input_processo_com_defesa_checked" >
+                            
+                            <span id="span_processo_com_defesa_checked_2">o interessado apresenta defesa ao Auto de Infração para análise da CEP.</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+            
+
+
+
+
+
+
+        </div>
+
+
+        <!-- Análises e Considerações ----------------------------------------------------------------- -->  
+
+
+        <div class="container border my-4" id="div_analises_consideracoes">
+
+            <fieldset class="border p-2">
+
+                <legend class="w-auto">Análises e Considerações</legend>
+
+                     
+                <!-- id DUPLICADO -->
+                <div class="collapse border" id="div_processo_com_defesa_checked"> 
+                    
+                    <label id="lab_processo_com_defesa_checked_analise" for="" ><strong>Processo com defesa.</strong></label>                            
+                    <textarea class="my-1"  id="area_processo_com_defesa_checked_analise" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Resumir as alegações da defesa, incluindo os documentos apresentados, e contrapor tais alegações com base nos documentos do processo e legislação cabível."></textarea>
+
+                </div>
+            
+        
+                <!-- id DUPLICADO -->
+                <div class="collapse border" id="div_processo_revelia_checked"> 
+                    
+                    <label id="lab_processo_revelia_analise" for=""><strong>Processo à Revelia.</strong></label>
+                    <p id="">
+                        <span id="span_processo_revelia_analise">A Fiscalização averiguou e juntou ao relatório <span>DOCUMENTOS APRESENTADOS PELA FISCALIZAÇÃO (SELEÇÃO????)</span></span></span>
+                    </p>
+                </div>
+
+                <!-- -------------------------------------- -->
+
+                <input type="checkbox" id="input_sem_regularizacao_sem_pagamento"  data-toggle="collapse" data-target="#div_sem_regularizacao_sem_pagamento_checked" value="">
+                <label class="my-3" id="lab_sem_regularizacao_sem_pagamento" for="input_sem_regularizacao_sem_pagamento"><strong>Sem regularização e sem pagamento de multa:</strong></label>
+
+                <div class="collapse border" id="div_sem_regularizacao_sem_pagamento_checked">
+                    
+                    <span id="span_sem_regularizacao_sem_pagamento_checked_1">Além disso, a interessada não eliminou o fato gerador e nem efetuou o pagamento da multa, de acordo com a pesquisa realizada em</span>
+                
+                    <!-- data contestacao -->          
+                    <input type="date" id="input_sem_regularizacao_sem_pagamento_checked_1" >
+    
+                    <span id="span_sem_regularizacao_sem_pagamento_checked_2">pela Fiscalização.</span>
+                    
+                </div>
+
+                <hr>
+
+                <input type="checkbox" id="input_somente_regularizacao"  data-toggle="collapse" data-target="#div_somente_regularizacao_checked" value="">
+                <label class="my-3" id="lab_somente_regularizacao" for="input_somente_regularizacao"><strong>Se houve somente a regularização:</strong></label>
+
+                <div class="collapse border" id="div_somente_regularizacao_checked">
+                    
+                    <span id="span_somente_regularizacao_checked_1">Apesar do fato gerador ter sido regularizado em</span>
+                
+                    <!-- data  -->          
+                    <input type="date" id="input_somente_regularizacao_checked" >
+    
+                    <span id="span_somente_regularizacao_checked_2">, isso ocorreu após a lavratura do Auto de Infração, além de a multa não ter sido paga até o momento, conforme apontado em pesquisa realizada em</span>
+                    
+                    <!-- data  -->          
+                    <input type="date" id="input_somente_regularizacao_checked" >
+                    
+                </div>
+
+                <hr>
+
+                <input type="checkbox" id="input_somente_pagamento_multa"  data-toggle="collapse" data-target="#div_somente_pagamento_multa_checked" value="">
+                <label class="my-3" id="lab_somente_pagamento_multa" for="input_somente_pagamento_multa"><strong>Se houve somente o pagamento da multa:</strong></label>
+
+                <div class="collapse border" id="div_somente_pagamento_multa_checked">
+                    
+                    <span id="span_somente_pagamento_multa_checked_1">Além disso, verificou-se que a multa foi paga em </span>
+                
+                    <!-- data  -->          
+                    <input type="date" id="input_somente_pagamento_multa_checked_1" >
+    
+                    <span id="span_somente_pagamento_multa_checked_2">mas o fato gerador não foi elimintado, de acordo com pesquisa realizada em </span>
+                    
+                    <!-- data  -->          
+                    <input type="date" id="input_somente_pagamento_multa_checked_2" >
+                    
+                </div>
+
+                <hr>
+
+                <div class="border">
+                    
+                    <p style="text-align: justify">
+                    Diante de tais fatos e<br>
+                    Considerando que o rito processual foi corretamente seguido;<br>
+                    Considerando o art. 7º da Lei 12.378/2010:<br>
+                    </p>
+
+                    <p style="margin-left: 94px; text-align: justify; ">
+                    “Art. 7º. Exerce ilegalmente a profissão de arquiteto e urbanista a pessoa física ou jurídica que realizar atos ou prestar serviços, públicos ou privados, privativos dos profissionais de que trata esta Lei ou, ainda, que, mesmo não realizando atos privativos, se apresenta como arquiteto e urbanista ou como pessoa jurídica que atue na área de arquitetura e urbanismo sem registro no CAU”
+                    </p>
+
+                    <p style="text-align: justify">
+                        Considerando o art. 35, inciso X, da Resolução 22/2012:
+                    </p>
+
+                    <p style="text-align: justify">
+                        “Art. 35. As infrações ao exercício da profissão de Arquitetura e Urbanismo nos termos definidos nesta Resolução serão punidas com multas, respeitados os seguintes limites:
+                    </p>
+
+                    <p style="margin-left: 94px; text-align: justify; ">
+                        (...) <br>
+                        X – Pessoa jurídica sem registro no CAU exercendo atividade privativa de arquitetos e urbanistas;<br>
+                        Infrator: pessoa jurídica;<br>
+                        Valor da Multa: mínimo de 5 (cinco) vezes e máximo de 10 (dez) vezes o valor vigente da anuidade”
+                    </p>
+
+                    <p style="text-align: justify">
+                        Considerando a Lei nº 6.839/1980, que em seu art. 1º diz:
+                    </p>
+
+                    <p style="margin-left: 94px; text-align: justify; ">
+                      “Art. 1º O registro de empresas e a anotação dos profissionais legalmente habilitados, delas encarregados, serão obrigatórios nas entidades competentes para a fiscalização do exercício das diversas profissões, em razão da atividade básica ou em relação àquela pela qual prestem serviços a terceiros.”
+                    </p>
+
+                </div>
+
+                <div id="div_legislacao_regularizacao_sem_pagamento_multa">
+                    
+
+                   
+
+                    <div class="collapse border" id="div_somente_regularizacao_checked"> <!-- id duplicado -->
+
+                        <label class="my-3" id="lab_legislacao_regularizacao_sem_pagamento_multa" for="input_notificacao_preventiva"><strong>Houve regularização sem pagamento de multa:</strong></label>
+                        <p style="text-align: justify">
+                            Considerando o art. 38 da Resolução 198/2020:
+                        </p>
+    
+                        <p style="margin-left: 94px; text-align: justify; ">
+                            “Art. 38. Depois de lavrado o auto de infração, a regularização da situação não exime a pessoa física ou jurídica das penalidades aplicadas.”</p>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="div_legislacao_pagametento_multa_sem_regularizacao">
+                    
+                    
+                    
+
+                    <div class="collapse border" id="div_somente_pagamento_multa_checked">  <!-- id duplicado -->
+
+                        <label class="my-3" id="lab_somente_pagamento_multa_checked" for="input_notificacao_preventiva"><strong>Houve pagamento da multa sem regularização:</strong></label>
+                        <p style="text-align: justify">
+                            Considerando o art. 38 da Resolução 198/2020:
+                        </p>
+    
+                        <p style="margin-left: 94px; text-align: justify; ">
+                            “Art. 38. Depois de lavrado o auto de infração, a regularização da situação não exime a pessoa física ou jurídica das penalidades aplicadas.”</p>
+                        </p>
+                    </div>
+
+                </div>
+
+                
+                <div id="div_legislacao_com_defesa">
+                    
+                    
+                   
+
+                    <!-- id duplicado -->
+                    <div class="collapse border" id="div_processo_com_defesa_checked">
+
+                        <label class="my-3" id="lab_notificacao_preventiva" for="input_notificacao_preventiva"><strong>Com defesa</strong></label>
+
+                        <p style="text-align: justify">
+                            Considerando o art. 52 da Resolução 198/2020:
+                        </p>
+    
+                        <p style="margin-left: 94px; text-align: justify; ">
+                            “Apresentada defesa ao auto de infração, esta será encaminhada à CEP-CAU/UF para apreciação e julgamento, com base em relatório e voto fundamentado do conselheiro relator designado dentre os membros da comissão.”
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="div_legislacao_revelia">
+                    
+                    
+                   
+
+                    <!-- id duplicado -->
+                    <div class="collapse border" id="div_processo_revelia_checked">
+
+                        <label class="my-3" id="lab_notificacao_preventiva" for="input_notificacao_preventiva"><strong>À revelia</strong></label>
+                        <p style="text-align: justify">
+                            Considerando o art. 54 da Resolução 198/2020:
+                        </p>
+    
+                        <p style="margin-left: 94px; text-align: justify; ">
+                            “Art. 54. A CEP-CAU/UF julgará à revelia a pessoa física ou jurídica autuada que não apresentar defesa ao auto de infração, sendo garantido amplo direito de defesa nas fases subsequentes do processo.”
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- calculo da dosimetria -->
+
+                <div class="mt-3">
+
+                    <p class="d-flex align-items-center">
+                        <div style="font-style: italic; margin-bottom: 10px;">(Observação: Caso a multa tenha sido paga não é necessário realizar o cálculo da dosimetria no botão abaixo)</div>
+                        <button class="btn btn-sm btn-primary d-flex align-items-center" type="button" data-toggle="collapse" data-target="#calculadora">
+                            <strong>Calcular dosimetria</strong>
+                        </button>
+                        
+                    </p>
+        
+        
+                    <div class="collapse card" id="calculadora">
+
+
+                        <h4 class="bg-warning">calculadora aqui....</h4>
+
+                        <h4 class="bg-warning">tabela</h4>
+             
+
+        
+                        <div style="text-align: justify">
+                          
+                            <p>
+                                Por fim, uma vez que o presente processo foi aberto sob a Resolução 22/2012, revogada pelo advento da Resolução 198/2020, é necessário verificar as disposições materiais para se aplicar a situação mais benéfica ao interessado, conforme dispõe o art. 81, parágrafo único, da nova Resolução.
+                            </p>
+                            
+                            <p>
+                                Assim, segue o seguinte: <br>
+                            </p>  
+
+                            <p>  
+                                A infração do inciso X do art. 35 da Resolução 22 equivale ao inciso II do art. 39 da Resolução 198: “exercer, promover-se, divulgar que exerce ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem registro no CAU, configurando exploração econômica da atividade”.
+                            </p>  
+                            
+                            <p>
+                                Aplicando-se a dosimetria da multa da Resolução 198/2020:<br>
+                            </p> 
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+     
+
+            </fieldset>
+
+
+        
+
+
+           
+
+            
+
+        </div>
+
+    
+
+
+
+
+        <!-- Voto  -------------------------------------------------------------------------------------- -->
+
+        <div class="container my-4 border" id="div_voto">
+
+            <fieldset class="border p-2">
+
+                <legend class="w-auto">Voto</legend>
+
+                <label class="mb-3" for="" id="lab_razoes_decisao"><strong>Resumo dos fatos:</strong></label>      
+                <textarea class="my-1"  id="area_razoes_decisao" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="">
+Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa paga
+                </textarea>
+
+                <div class="collapse border" id="div_somente_pagamento_multa_checked">  <!-- id duplicado -->
+
+ 
+
+
+                    <label class="my-3" for="" id="lab_alteracao_multa"><strong>Houve alteração de multa?</strong></label>
+                    <div id="div_alteracao_multa">
+                        <input type="checkbox" id="input_alteracao_multa_sim" >
+                        <label for="input_alteracao_multa_sim" id="lab_alteracao_multa_sim">Sim</label>
+                    
+                        <input type="checkbox" id="input_alteracao_multa_nao">
+                        <label for="input_alteracao_multa_nao" id="lab_alteracao_multa_nao">Não</label>
+                    </div>
+                    
+                    
+                    <div class="border" id="div_alteracao_multa_sim" style="display: none;">
+                        
+                        <span id="span_corresp_alteracao_multa_sim" contenteditable="true">
+                            <span>Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020, alterando o valor da multa para </span>
+                            
+                            <span style="font-weight: bold;">R$ XX.XXX,XX (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.)</span>
+
+
+                        </span>
+
+                        <br><br>
+
+                    </div>
+                    
+                    <div class="border" id="div_alteracao_multa_nao" style="display: none;" contenteditable="true">
+                        
+                        <span id="span_alteracao_multa_nao">
+                            Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010 e inciso X do Art. 35 da Resolução Nº 22 do CAU/BR, mantendo o valor da multa aplicada pela Fiscalização do CAU/SP.
+                        </span>
+                                            
+                        <br><br>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="d-flex justify-content-center my-5">
+                    <span>
+                    <input type="text" id="cidade_assinatura" style="text-align: center; width: 200px;" placeholder="Insira o nome da cidade">
+                    </span>
+                    ,
+
+                    <span>
+                    <input type="text" id="data_assinatura" style="text-align: center; width: 300px;" placeholder="Clique aqui para inserir uma data."><br><br>
+                    </span>
+                </div>
+
+                <div class="d-flex justify-content-center my-5">
+                    <div >
+
+                        <input type="text" id="nome_conselheiro_relator" style="text-align: center; width: 400px;" placeholder="Insira o nome do Conselheiro/a relator/a.">
+                        <br>
+                        <div class="d-flex justify-content-center" contenteditable="true">
+                            <strong>Conselheiro/a da CEP-CAU/SP</strong>
+                        </div>
+                        
+                    </div>
+            
+                </div>
+
+                
+
+
+
+        
+            </fieldset>
+
+
+
+
+            <!-- <div class="card" id="">
+
+                <BR></BR><BR></BR><BR></BR><BR></BR><BR></BR>
+        
+                <div class="card-header">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+                <div class="card-footer">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div> -->
+
+            
+        
+        </div>
+
+        <!-- div relato completo -->
+
+        <div class="container border my-4" id="div_relato_final" contenteditable="true">
+            
+            
+            Complete os dados para gerar o relato.
+
+
+        </div>
+
+
+
+        <!-- botões -->
+
+        <div class="container text-center" id="div_botoes">
+
+            <!-- atualizar -->
+            <button class="btn btn-sm btn-primary" id="btn_atualizar" style="width: 90px;" onclick=atualizar()><strong>Atualizar</strong></button>
+            
+            <!-- copiar -->
+            <button class="btn btn-sm btn-success mr-2 ml-2" id="btn_copiar" style="width: 90px;" onclick="copiar()"><strong>Copiar</strong></button>
+
+            <!-- gerar pdf -->
+            <button class="btn btn-sm btn-secondary" id="btn_imprimir_pdf"  style="width: 90px;"><strong>Gerar PDF</strong></button>
+
+        </div>
+
+
+
+
+        
+
+
+        <!--------------------------------------- footer  ---------------------------------------->
+
+        <footer class="d-flex align-items-center justify-content-center py-2 mt-3 bg-light">
+            <p class="m-1">CAU/SP</p>
+        </footer>
+        
+    
+        <!-- JavaScript (Opcional) -->
+        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        
+        <!-- versão antiga -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- jQuery Mask Plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+
+
+
+    
+        <script>
+
+        // ----------------------------------------------------------------------------------------------
+
+        function atualizar() {
+            
+            let tab_cabecalho = document.getElementById("tab_cabecalho").cloneNode(true)
+            let lab_resumo_fatos = document.getElementById("lab_resumo_fatos").cloneNode(true)
+
+            
+
+            let div_relato_final = document.getElementById("div_relato_final")
+            div_relato_final.innerHTML = ""
+
+            div_relato_final.appendChild(tab_cabecalho)
+            div_relato_final.appendChild(lab_resumo_fatos)
+
+            console.log(div_relato_final)
+            console.log(lab_resumo_fatos)
+
+        }
+
+
+        // Função para copiar o texto ------------------------------------------------------------------------
+        function copiar() {
+            
+            const conteudo_div_relato_final = document.getElementById('div_relato_final');
+           
+            const textArea = document.createElement('textarea');
+
+            // Definir o conteúdo da textarea como o texto da div resultado
+            textArea.value = conteudo_div_relato_final.innerText;
+
+            // Adicionar a textarea temporariamente ao DOM para copiar o texto com quebras de linha
+            document.body.appendChild(textArea);
+
+            // Selecionar todo o texto da textarea
+            textArea.select();
+
+            try {
+                // Executar o comando de cópia
+                document.execCommand('copy');
+                console.log('Copiado');
+                
+            } catch (err) {
+                console.error('Erro ao copiar texto: ', err);
+            } finally {
+                // Remover a textarea do DOM após a cópia
+                document.body.removeChild(textArea);
+            }
+        }
+
+        // gerar pdf ------------------------------------------------------------------------------------------------------------
+
+        document.getElementById('btn_imprimir_pdf').addEventListener('click', function() {
+            // Oculta todos os elementos que não estão dentro da div_relato
+            var elementosForaDivRelato = document.querySelectorAll('body > *:not(#div_relato_final)');
+            elementosForaDivRelato.forEach(function(elemento) {
+                elemento.style.display = 'none';
+            });
+
+            // Chama a função de impressão
+            window.print();
+
+            // Restaura a exibição dos elementos ocultos
+            elementosForaDivRelato.forEach(function(elemento) {
+                elemento.style.display = '';
+            });
+        });
+
+        // CHECKBOX DA NOTIFICAÇÃO PREVENTIVA  ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim = document.getElementById('input_devolucao_corresp_sim');
+        var checkboxNao = document.getElementById('input_devolucao_corresp_nao');
+
+        // Obtém as divs correspondentes
+        var divSim = document.getElementById('div_corresp_devolvida_sim');
+        var divNao = document.getElementById('div_corresp_devolvida_nao');
+
+        // Adiciona os event listeners
+        checkboxSim.addEventListener('change', function() {
+            if (checkboxSim.checked) {
+                checkboxNao.checked = false; // Desmarca o outro checkbox
+                divSim.style.display = 'block';
+                divNao.style.display = 'none';
+            } else {
+                divSim.style.display = 'none';
+            }
+        });
+
+        checkboxNao.addEventListener('change', function() {
+            if (checkboxNao.checked) {
+                checkboxSim.checked = false; // Desmarca o outro checkbox
+                divNao.style.display = 'block';
+                divSim.style.display = 'none';
+            } else {
+                divNao.style.display = 'none';
+            }
+        });
+
+        // CHECKBOX DO AUTO DE INFRAÇÃO ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_Auto = document.getElementById('input_devolucao_corresp_auto_sim');
+        var checkboxNao_Auto = document.getElementById('input_devolucao_corresp_auto_nao');
+
+        // Obtém as divs correspondentes
+        var divSim_Auto = document.getElementById('div_corresp_auto_devolvida_sim');
+        var divNao_Auto = document.getElementById('div_corresp_auto_devolvida_nao');
+
+        // Adiciona os event listeners
+        checkboxSim_Auto.addEventListener('change', function() {
+            if (checkboxSim_Auto.checked) {
+                checkboxNao_Auto.checked = false; // Desmarca o outro checkbox
+                divSim_Auto.style.display = 'block';
+                divNao_Auto.style.display = 'none';
+            } else {
+                divSim_Auto.style.display = 'none';
+            }
+        });
+
+        checkboxNao_Auto.addEventListener('change', function() {
+            if (checkboxNao_Auto.checked) {
+                checkboxSim_Auto.checked = false; // Desmarca o outro checkbox
+                divNao_Auto.style.display = 'block';
+                divSim_Auto.style.display = 'none';
+            } else {
+                divNao_Auto.style.display = 'none';
+            }
+        });
+
+                // ALTERAÇÃO DE MULTA ---------------------------------------------------------------------------------
+
+        // Obtém os elementos de checkbox
+        var checkboxSim_AlteracaoMulta = document.getElementById('input_alteracao_multa_sim');
+        var checkboxNao_AlteracaoMulta = document.getElementById('input_alteracao_multa_nao');
+
+        // Obtém as divs correspondentes
+        var divSim_AlteracaoMulta = document.getElementById('div_alteracao_multa_sim');
+        var divNao_AlteracaoMulta = document.getElementById('div_alteracao_multa_nao');
+
+        // Adiciona os event listeners
+        checkboxSim_AlteracaoMulta.addEventListener('change', function() {
+            if (checkboxSim_AlteracaoMulta.checked) {
+                checkboxNao_AlteracaoMulta.checked = false; // Desmarca o outro checkbox
+                divSim_AlteracaoMulta.style.display = 'block';
+                divNao_AlteracaoMulta.style.display = 'none';
+            } else {
+                divSim_AlteracaoMulta.style.display = 'none';
+            }
+        });
+
+        checkboxNao_AlteracaoMulta.addEventListener('change', function() {
+            if (checkboxNao_AlteracaoMulta.checked) {
+                checkboxSim_AlteracaoMulta.checked = false; // Desmarca o outro checkbox
+                divNao_AlteracaoMulta.style.display = 'block';
+                divSim_AlteracaoMulta.style.display = 'none';
+            } else {
+                divNao_AlteracaoMulta.style.display = 'none';
+            }
+        });
+
+
+
+
+        // Função para paralisar o clique do mouse em um checkbox por 3 segundos
+        function paralyzeClick(checkbox) {
+            // Desabilita o checkbox clicado
+            checkbox.disabled = true;
+
+            // Aguarda 3 segundos
+            setTimeout(function() {
+                // Habilita novamente o checkbox após 3 segundos
+                checkbox.disabled = false;
+            }, 600); // milissegundos 
+        }
+
+        // Seleciona todos os checkboxes da página
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        // Adiciona um event listener para cada checkbox
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                // Chama a função para paralisar o clique do mouse, passando o checkbox clicado como argumento
+                paralyzeClick(checkbox);
+            });
+        });
+        
+
+        // ------------------------------------------------------------------------------------------------------------
+        
+        // Aplica a máscara quando o documento estiver pronto numero processo
+        $(document).ready(function() {
+            $('#num_processo').mask('000/0000');
+        });
+
+        // Aplica a máscara quando o documento estiver pronto data
+        $(document).ready(function() {
+            $('#input_dt_relatorio_fisc').mask('00/00/0000');
+        });
+        </script>
+
+
+    </body>
+</html>
