@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Exibir o valor da multa no elemento HTML
             document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2);
+            document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2);
         } else {
             // Se o valor do múltiplo de anuidade for 0 ou se o ano da notificação preventiva não foi selecionado,
             // exibir uma mensagem indicando que é necessário selecionar o ano da notificação preventiva
