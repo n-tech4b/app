@@ -153,15 +153,15 @@
 
             <fieldset class="border rounded border-dark p-3">
                 
-                <legend class="w-auto px-1">Histórico do Processo</legend>
+                <legend class="w-auto px-1" id="legend_historico_processo" >Histórico do Processo</legend>
                
 
-                <label class="mb-3" for="" id="lab_resumo_fatos"><strong>Resumo dos fatos:</strong></label>      
-                <textarea class="form-control my-1" id="area_resumo_fatos" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Pode ser em texto corrido ou em tópicos, indicando o documento e a data de sua emissão."></textarea>
+                <!-- <label class="mb-3" for="" id="lab_resumo_fatos"><strong>Resumo dos fatos:</strong></label>      
+                <textarea class="form-control my-1" id="area_resumo_fatos" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="Pode ser em texto corrido ou em tópicos, indicando o documento e a data de sua emissão."></textarea> -->
 
                 
 
-                <label class="my-3" for="" id="lab_origem_demanda"><strong>Origem da demanda:</strong></label>
+                <label class="my-3" for="" id="lab_historico_processo"><strong>Histórico do Processo</strong></label>
                 <p class="my-1" id="p_origem_demanda">
 
                     <span id="span_origem_demanda_1" contenteditable="true">Trata-se de processo de fiscalização iniciado a partir de</span>
@@ -498,7 +498,7 @@
 
             <fieldset class="border rounded border-dark p-3">
 
-                <legend class="w-auto px-1">Análises e Considerações</legend>
+                <legend class="w-auto px-1" id="legend_analises_consideracoes" >Análises e Considerações</legend>
 
                      
 
@@ -510,7 +510,7 @@
                     <label id="lab_processo_revelia_analise" for=""><strong>Processo à Revelia.</strong></label>
                     <div class="border rounded px-2 py-3 ">       
                         <p id="">
-                            <span id="span_processo_revelia_analise">A Fiscalização averiguou e juntou ao relatório DOCUMENTOS APRESENTADOS PELA FISCALIZAÇÃO (SELEÇÃO????)</span>
+                            <span id="span_processo_revelia_analise" contenteditable="true">A Fiscalização averiguou e juntou ao relatório DOCUMENTOS APRESENTADOS PELA FISCALIZAÇÃO</span>
                         </p>
                     </div>
                 </div>
@@ -574,7 +574,7 @@
                         <!-- data  -->          
                         <input type="text" class="dts form-control form-control-sm w-auto d-inline mb-1" id="input_somente_pagamento_multa_checked_1" placeholder="DD/MM/AAAA">
         
-                        <span id="span_somente_pagamento_multa_checked_2">mas o fato gerador não foi elimintado, de acordo com pesquisa realizada em </span>
+                        <span id="span_somente_pagamento_multa_checked_2">mas o fato gerador não foi eliminado, de acordo com pesquisa realizada em </span>
                         
                         <!-- data  -->          
                         <input type="text" class="dts form-control form-control-sm w-auto d-inline" id="input_somente_pagamento_multa_checked_2" placeholder="DD/MM/AAAA">
@@ -1136,36 +1136,53 @@
                                             <div class="d-flex">
                                                 <p class="d-flex my-1 align-items-center"><strong>Valor total da multa, conforme Resolução nº 198:</strong></p>         
                                                 <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res198"></p>  
-                                            </div>    
+                                            </div>  
+
+                                            <hr>
+
+                                            <div class="d-flex">
+                                                <p class="d-flex my-1 align-items-center"><strong>Valor da multa, conforme Resolução nº 22:</strong></p>         
+                                                <p class="d-flex my-1 align-items-center ml-2" id="valor_multa_res22"></p> 
+                                                <input type="text" style="width: 250px; height: 30px;" class="form-control" id="valorMultaRes22" value="" placeholder="Se necessário, informe o valor..."> 
+                                            </div> 
+                                            
+                                            <hr>
+                                            <div class="d-flex">
+                                                <p class="d-flex my-1 align-items-center"><strong>Multa a ser aplicada:</strong></p>         
+                                                <p class="d-flex my-1 align-items-center ml-2" id="multa_aplicada"></p>     
+                                            </div>  
+                                            
+                                            
                                             
                                             <hr>
 
                                             <div style="text-align: justify">
                           
-                                                <p>
+                                                <p id="dosimetria_resolucao_1">
                                                     Por fim, uma vez que o presente processo foi aberto sob a Resolução 22/2012, revogada pelo advento da Resolução 198/2020, é necessário verificar as disposições materiais para se aplicar a situação mais benéfica ao interessado, conforme dispõe o art. 81, parágrafo único, da nova Resolução.
                                                 </p>
                                                 
-                                                <p>
+                                                <p id="dosimetria_resolucao_2">
                                                     Assim, segue o seguinte: <br>
                                                 </p>  
                     
-                                                <p>  
+                                                <p id="dosimetria_resolucao_3">  
                                                     A infração do inciso X do art. 35 da Resolução 22 equivale ao inciso II do art. 39 da Resolução 198: “exercer, promover-se, divulgar que exerce ou oferecer atividade fiscalizada pelo Conselho de Arquitetura e Urbanismo, sem registro no CAU, configurando exploração econômica da atividade”.
                                                 </p>  
                                                 
-                                                <p>
+                                                <p id="dosimetria_resolucao_4">
                                                     Aplicando-se a dosimetria da multa da Resolução 198/2020:<br>
                                                 </p> 
                     
                                             </div>
 
                                             <div class="" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
-                                                <table class="border border-dark" id="tabela_resumo">
+                                                
+                                                <table class="border border-dark" id="tabela_resumo" style="font-family: calibri; text-align: start;">
                                                     <tr class="border border-dark">
-                                                        <td class="border border-dark">Gravidade da Infração&nbsp;&nbsp;&nbsp;</td>
-                                                        <td class="border border-dark text-center" id="pontos_gravidade">0 pontos (s)</td>
-                                                        <td class="border border-dark" id="descricao_gravidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                                        <td class="border border-dark" style="width: 200px;" >Gravidade da Infração&nbsp;&nbsp;&nbsp;</td>
+                                                        <td class="border border-dark text-center" id="pontos_gravidade" style="width: 150px;">0 pontos (s)</td>
+                                                        <td class="border border-dark" id="descricao_gravidade" style="width: 400px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                     </tr>
                                                     <tr class="border border-dark">
                                                         <td class="border border-dark">Grau de Impacto</td>
@@ -1189,41 +1206,22 @@
                                                 </table>
 
                                                 <div class="mt-2 mb-3">
-                                                    <span>Chegamos ao valor de </span>
-                                                    <span id="valor_multa_res198_final">R$ 0,00</span>
-                                                    <span>,</span>
-                                                    <!-- [lista suspensa],  -->
-                                                    <select class="form-control form-control-sm w-auto  d-inline" id="select_regional" >
+                                                    
+
+                                                    <span id="span_multa_superior_ou_inferior"></span>
+
+
+                                                    <!-- [lista suspensa], 
+                                                    <select class="form-control form-control-sm w-auto  d-inline" id="" >
                                                         <option value="">Selecionar</option>
                                                         <option value="">inferior</option>
                                                         <option value="">superior</option>
                                         
-                                                    </select>
+                                                    </select> -->
                                                     
-                                                    <span>ao aplicado com base na Resolução 22/2012 </span>
+                                                    
                                                 </div>
 
-                                                <!-- [lista suspensa]  
-                                                <div class="d-flex">
-                                                    
-                                                    <p class="d-flex my-1 align-items-center">
-                                                        
-                                                        Chegamos ao valor de:&nbsp;   
-                                                    
-                                                        <span id="valor_multa_res198_final"></span>  
-
-                                                        // [lista suspensa] 
-                                                        <select class="custom-select custom-select-sm" id="select_origem_demanda" style="width: 90px;">
-                                                            <option value="">Selecione</option>
-                                                            <option value="">superior</option>
-                                                            <option value="">inferior</option>
-                                                        </select>
-
-                                                        &nbsp;ao aplicado com base na Resolução 22/2012.
-                                                    </p>
-                                                                                    
-                                                </div>  
-                                                -->
 
                                             </div>
                                             
@@ -1290,12 +1288,37 @@
             
             <fieldset class="border rounded border-dark p-3">
 
+                <legend class="w-auto px-1" id="legend_voto" >Voto</legend>
 
-                <label class="mb-3" for="" id="lab_razoes_decisao"><strong>Resumo dos fatos:</strong></label>      
+
+                <label class="mb-3" for="" id="lab_razoes_decisao"><strong>Razões da Decisão</strong></label>      
                 <textarea class="form-control my-1"  id="area_razoes_decisao" cols="30" rows="5" style="width: 100%; padding: 5px;" placeholder="">
 Diante do exposto acima, é evidente a infração ao exercício profissional cometido pela empresa interessada, estando ela ainda irregular/tendo ela regularizado o fato gerador somente após o auto de infração e/mas com a multa não paga/com a multa paga.</textarea>
 
-                <div class="" style="display: none;" id="div_somente_pagamento_multa_checked_voto"> 
+
+
+                    
+                    
+                <div class="card p-2" id="div_multa_paga_voto" style="display: none;">
+                    
+                    <span id="" contenteditable="true">
+
+                        <span id="span_multa_paga_voto">Assim, voto pela Manutenção do Auto de Infração com base nos Art. 7º da Lei 12.378/2010, inciso X do Art. 35 da Resolução Nº 22/2012 e art. 38 da Resolução nº 198/2020.</span>
+                        
+
+                    </span>
+
+                    <br><br>
+
+                </div>
+                    
+
+
+
+
+
+
+                <div class="" style="display: block;" id="div_somente_pagamento_multa_checked_voto"> 
 
  
 
@@ -1341,35 +1364,36 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 <div class="d-flex justify-content-center mt-5 mb-1">
 
                     <span>
-                        <input type="text" class="form-control form-control-sm" id="assinatura_1" style="text-align: center; width: 220px;" placeholder="Clique aqui para inserir a cidade">
+                        <div type="text" class="form-control form-control-sm" id="assinatura_1" style="text-align: center; width: 220px;" contenteditable="true">São Paulo</div>
                     </span>
 
                     <span id="assinatura_2" class="mt-2">,</span>
                     
 
                     <span>
-                        <input type="text" class="form-control form-control-sm" id="assinatura_3" style="text-align: center; width: 280px;" placeholder="Clique aqui para inserir uma data"><br><br>
+                        <div type="text" class="form-control form-control-sm" id="assinatura_3" style="text-align: center; width: 280px;" contenteditable="true"></div>
+                            
+                        <br><br>
                     </span>
-
+                    
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
                     <div>
 
-                        <input type="text" class="form-control form-control-sm" id="assinatura_4" style="text-align: center; width: 400px;" placeholder="Insira o nome do Conselheiro/a relator/a.">
-                        
 
-
-
-                        <!-- <span class="d-flex justify-content-center" contenteditable="true">&nbsp;
+                        <span class="d-flex justify-content-center" contenteditable="true">&nbsp;
                             
-                            <select class="form-control form-control-sm w-auto d-inline text-center"  id="select_origem_demanda">
-                                <option value="">Insira o nome do Conselheiro/a relator/a.</option>
-                                <option value="">Nome Relator 01234</option>
-                                <option value="">Nome Relator 5678</option>
-                                <option value="">Nome Relator 9101112</option>
-                            </select>&nbsp;
-                        </span> -->
+                            <select class="form-control form-control-sm d-inline text-center" style="text-align: center; width: 300px;" id="assinatura_4">
+                                <option value="" >Selecione o nome do Conselheiro/a relator/a.</option>
+                                <option value="">Nome Relator 001</option>
+                                <option value="">Nome Relator 002</option>
+                                <option value="">Nome Relator 003</option>
+                                <option value="">Nome Relator 004</option>
+                                <option value="">Nome Relator 005</option>
+                                <option value="">Nome Relator 006</option>
+                            </select>
+                        </span>
                         
                         <div class="d-flex justify-content-center" id="assinatura_5" contenteditable="true">
                             <strong>Conselheiro/a da CEP-CAU/SP</strong>
@@ -1419,7 +1443,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
         <div class="container my-3" >
 
-            <fieldset class="border rounded border-dark p-3" style="display: none;" id="fildset__relato_final">
+            <fieldset class="border rounded border-dark p-3" style="display: none;" id="fieldset_relato_final">
 
                 <legend class="w-auto px-1">Relato Finalizado</legend>
 
@@ -1457,11 +1481,11 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
 
    
-                    <div id="conteúdo_relato_final" style="color: black; text-align: justify" >
+                    <div id="conteudo_relato_final" style="color: black; text-align: justify" >
 
                         <p><br></p>   <!-- pular linha -->
 
-                        <p  id="lab_historico_processo_final"><strong>HISTÓRICO DO PROCESSO:</strong></p>                          
+                        <p  id="p_historico_processo_final" style="font-weight: bold; text-transform: uppercase;"></p>                          
                         
                         <p style="margin-bottom: 8px;" id="p_resumo_fatos_final"></p>
                             <span id="span_origem_demanda_1_final"></span>
@@ -1551,7 +1575,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
 
  
-                        <p class="my-3" for="" id="lab_historico_processo_final"><strong>ANÁLISES E CONSIDERAÇÕES:</strong></label>      
+                        <p id="legend_analises_consideracoes_final" style="font-weight: bold; text-transform: uppercase;"></p>      
 
                         <!-- elemento condicionado -->  
                         <p>
@@ -1607,38 +1631,34 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                         <p id="p_processo_com_defesa_checked_resolucoes_1_final" style="text-align: justify"></p>
                         <p class="espacamento_simples" id="p_processo_com_defesa_checked_resolucoes_2_final" style="margin-left: 94px; text-align: justify; "></p>
 
+
+
+                        <p id="dosimetria_resolucao_1_final"></p>
+                        <p id="dosimetria_resolucao_2_final"></p>
+                        <p id="dosimetria_resolucao_3_final"></p>
+                        <p id="dosimetria_resolucao_4_final"></p>
+
+
+                        <p id="tabela_resumo_final"></p>
+
+
+                        <p id="span_multa_superior_ou_inferior_final"></p>
                         
 
 
-                        <!-- <p id="p_resolucoes_fixo_1_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_2_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_3_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_4_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_5_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_6_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_7_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_8_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_9_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_10_final" >
-                        </p>
-                        <p id="p_resolucoes_fixo_11_final" >
-                        </p> -->
 
-           
+                        <!-- voto           -->
     
-                        <p class="my-3" for="" id="lab_historico_processo_final"><strong>VOTO:</strong></p>      
+                        <p id="p_voto_final" style="font-weight: bold; text-transform: uppercase;"></p>      
  
 
                         <p id="area_razoes_decisao_final" ></p>
+
+                        <!-- condicionado -->    
+                        <p >
+                            <span id="span_multa_paga_voto_final"></span>
+                        </p>
+
 
                         <!-- condicionado -->    
                         <p >
@@ -1651,7 +1671,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                             <span id="span_alteracao_multa_nao_final"></span>
                         </p>
 
-                        <p><br><br></p>
+                        <p><br></p>
 
 
                         <p style="text-align: center;">
@@ -1672,7 +1692,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
       
                         </p>
 
-                        <hr class="" style="width: 400px; border-color: black; height: 2px;">
+                        
 
                         <p style="text-align: center;">
 
@@ -1843,11 +1863,13 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             if (input_somente_pagamento_multa.checked) {
                 div_somente_pagamento_multa_checked.style.display = "block";
                 div_somente_pagamento_multa_checked_resolucoes.style.display = "block";
-                div_somente_pagamento_multa_checked_voto.style.display = "block";
+                div_multa_paga_voto.style.display = "block";
+                div_somente_pagamento_multa_checked_voto.style.display = "none"; //inversamente
             } else {
                 div_somente_pagamento_multa_checked.style.display = "none";
                 div_somente_pagamento_multa_checked_resolucoes.style.display = "none";
-                div_somente_pagamento_multa_checked_voto.style.display = "none";
+                div_multa_paga_voto.style.display = "none";               
+                div_somente_pagamento_multa_checked_voto.style.display = "block"; //inversamente
             }
             
         });
@@ -2003,6 +2025,14 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
         function atualizar() {
 
+
+
+            // HISTÓRICO DO PROCESSO
+
+            let legend_historico_processo = document.getElementById("legend_historico_processo");
+            let p_historico_processo_final = document.getElementById("p_historico_processo_final");
+            p_historico_processo_final.innerText = legend_historico_processo.innerText;
+            
             // atualizar dados do processo
             let input_num_processo = document.getElementById("input_num_processo");
             let input_interessado = document.getElementById("input_interessado");
@@ -2020,11 +2050,11 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             td_relator_final.innerText = input_relator.value;
 
 
-            // histórico do processo
+            // histórico do processo REMOVIDO NÃO É NECESSÁRIO
 
-            let area_resumo_fatos = document.getElementById("area_resumo_fatos");
-            let p_resumo_fatos_final = document.getElementById("p_resumo_fatos_final");
-            p_resumo_fatos_final.innerText = area_resumo_fatos.value;
+            // let area_resumo_fatos = document.getElementById("area_resumo_fatos");
+            // let p_resumo_fatos_final = document.getElementById("p_resumo_fatos_final");
+            // p_resumo_fatos_final.innerText = area_resumo_fatos.value;
 
 
             // origem da demanda
@@ -2051,7 +2081,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             let area_irregularidade = document.getElementById("area_irregularidade");
             let area_irregularidade_final = document.getElementById("area_irregularidade_final");
-            area_irregularidade_final.innerText = area_irregularidade.value;
+            area_irregularidade_final.textContent = area_irregularidade.value;
 
             // Data do Relatório de Fiscalização:
 
@@ -2110,6 +2140,13 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("A opção 'Sim' não está selecionada.");
+                span_corresp_devolvida_sim_1_final.innerText = "";
+                input_corresp_devolvida_sim_1_final.innerText = "";
+                span_corresp_devolvida_sim_2_final.innerText = "";
+                select_corresp_devolvida_sim_final.innerText = "";
+                span_corresp_devolvida_sim_3_final.innerText = "";
+                input_corresp_devolvida_sim_2_final.innerText = "";
+
             }
 
             // Verificar se a checkbox "Não" está selecionada
@@ -2132,6 +2169,14 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
+                span_corresp_devolvida_nao_1_final.innerText = "";
+                select_corresp_devolvida_nao_final.innerText = "";
+                span_corresp_devolvida_nao_2_final.innerText = "";
+                input_corresp_devolvida_nao_1_final.innerText = "";
+
+            
+            
+            
             }
 
             // Houve contestação da Notificação Preventiva?
@@ -2154,18 +2199,32 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
+                span_notificacao_preventiva_checked_1_final.innerText = "";
+                input_notificacao_preventiva_checked_final.innerText = "";
+                span_notificacao_preventiva_checked_2_final.innerText = "";
+
             }
 
 
+            
+
+
             // Houve tentativa de regularização?
-            let area_tentativa_regularizacao = document.getElementById("area_tentativa_regularizacao");
-            let area_tentativa_regularizacao_final = document.getElementById("area_tentativa_regularizacao_final");
-            area_tentativa_regularizacao_final.innerText = area_tentativa_regularizacao.value;
+            let input_tentativa_regularizacao = document.getElementById('input_tentativa_regularizacao')
+            if (input_tentativa_regularizacao.checked) {
+                let area_tentativa_regularizacao = document.getElementById("area_tentativa_regularizacao");
+                let area_tentativa_regularizacao_final = document.getElementById("area_tentativa_regularizacao_final");
+                area_tentativa_regularizacao_final.textContent = area_tentativa_regularizacao.value;
+            } else {
+                area_tentativa_regularizacao_final.textContent = ""
+            }
+
 
             let span_dt_auto = document.getElementById("span_dt_auto");
             let input_dt_auto = document.getElementById("input_dt_auto");
             let span_dt_auto_final = document.getElementById("span_dt_auto_final");
             let input_dt_auto_final = document.getElementById("input_dt_auto_final");
+
             span_dt_auto_final.innerText = span_dt_auto.innerText;
             input_dt_auto_final.innerText = input_dt_auto.value;
 
@@ -2206,7 +2265,14 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("A opção 'Sim' não está selecionada.");
+                span_corresp_auto_devolvida_sim_1_final.innerText = "";
+                input_corresp_auto_devolvida_sim_1_final.innerText = "";
+                span_corresp_auto_devolvida_sim_2_final.innerText = "";
+                select_corresp_auto_devolvida_sim_final.innerText = "";
+                span_corresp_devolvida_auto_sim_3_final.innerText = "";
+                input_corresp_auto_devolvida_sim_2_final.innerText = "";
             }
+
 
             // Verificar se a checkbox "Não" está selecionada
             if (input_devolucao_corresp_auto_nao.checked) {
@@ -2228,6 +2294,10 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
+                span_corresp_auto_devolvida_nao_1_final.innerText = "";
+                select_corresp_auto_devolvida_nao_final.innerText = "";
+                span_corresp_auto_devolvida_nao_2_final.innerText = "";
+                input_corresp_auto_devolvida_nao_1_final.innerText = "";
             }
 
 
@@ -2265,6 +2335,10 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
             } else {
                 console.log("Houve contestação da Notificação Preventiva? A opção está selecionada.");
+                span_processo_revelia_final.innerText = "";
+                span_processo_revelia_analise_final.innerText = "";
+                p_processo_revelia_checked_resolucoes_1_final.innerText = "";
+                p_processo_revelia_checked_resolucoes_2_final.innerText = "";
             }
 
 
@@ -2295,11 +2369,19 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 span_processo_regularizado_checked_1_final.innerText = span_processo_regularizado_checked_1.innerText;
                 input_processo_regularizado_checked_final.innerText = input_processo_regularizado_checked.value;
                 span_processo_regularizado_checked_2_final.innerText = span_processo_regularizado_checked_2.innerText;
-                span_processo_regularizado_checked_final.innerText = span_processo_regularizado_checked.value;
+                span_processo_regularizado_checked_final.textContent = span_processo_regularizado_checked.value;
                 span_processo_regularizado_checked_3_final.innerText = span_processo_regularizado_checked_3.innerText;
 
 
-            } 
+            } else {
+                span_processo_regularizado_checked_1_final.innerText = "";
+                input_processo_regularizado_checked_final.innerText = "";
+                span_processo_regularizado_checked_2_final.innerText = "";
+                span_processo_regularizado_checked_final.innerText = "";
+                span_processo_regularizado_checked_3_final.innerText = "";
+
+
+            }
 
             
             // Encaminhamento de processo: Processo com defesa.
@@ -2328,7 +2410,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 
                 let area_processo_com_defesa_checked_analise_final = document.getElementById("area_processo_com_defesa_checked_analise_final");
 
-                area_processo_com_defesa_checked_analise_final.innerText = area_processo_com_defesa_checked_analise.value;
+                area_processo_com_defesa_checked_analise_final.textContent = area_processo_com_defesa_checked_analise.value;
 
                 // elemento deve aparecer em analises e considerações
                 let p_processo_com_defesa_checked_resolucoes_1 = document.getElementById("p_processo_com_defesa_checked_resolucoes_1");
@@ -2340,12 +2422,24 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
                 p_processo_com_defesa_checked_resolucoes_1_final.innerText = p_processo_com_defesa_checked_resolucoes_1.innerText;
                 p_processo_com_defesa_checked_resolucoes_2_final.innerText = p_processo_com_defesa_checked_resolucoes_2.innerText;
+          
 
-              
-              
+            } else {
 
+                span_processo_com_defesa_checked_1_final.innerText = "";
+                input_processo_com_defesa_checked_final.innerText = "";
+                span_processo_com_defesa_checked_2_final.innerText = "";
+                area_processo_com_defesa_checked_analise_final.innerText = "";
+                p_processo_com_defesa_checked_resolucoes_1_final.innerText = "";
+                p_processo_com_defesa_checked_resolucoes_2_final.innerText = "";
+            }
 
-            } 
+            // Análises e Considerações
+
+            let legend_analises_consideracoes = document.getElementById("legend_analises_consideracoes");
+            let legend_analises_consideracoes_final = document.getElementById("legend_analises_consideracoes_final");
+            legend_analises_consideracoes_final.innerText = legend_analises_consideracoes.innerText;
+
 
             // Sem regularização e sem pagamento de multa:
 
@@ -2367,8 +2461,13 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = input_sem_regularizacao_sem_pagamento_checked_1.value;
                 span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = span_sem_regularizacao_sem_pagamento_checked_2.innerText;
 
+            } else {
+                span_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
+                input_sem_regularizacao_sem_pagamento_checked_1_final.innerText = "";
+                span_sem_regularizacao_sem_pagamento_checked_2_final.innerText = "";
 
-            } 
+
+            }
 
             // Se houve somente a regularização:
 
@@ -2403,10 +2502,17 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 p_somente_regularizacao_checked_resolucoes_1_final.innerText = p_somente_regularizacao_checked_resolucoes_1.innerText;
                 p_somente_regularizacao_checked_resolucoes_2_final.innerText = p_somente_regularizacao_checked_resolucoes_2.innerText;
 
+            } else {
+                span_somente_regularizacao_checked_1_final.innerText = "";
+                input_somente_regularizacao_checked_1_final.innerText = "";
+                span_somente_regularizacao_checked_2_final.innerText = "";
+                input_somente_regularizacao_checked_2_final.innerText = "";
+                p_somente_regularizacao_checked_resolucoes_1_final.innerText = "";
+                p_somente_regularizacao_checked_resolucoes_2_final.innerText = "";
+            }
 
 
 
-            } 
 
             // Se houve somente o pagamento da multa:
 
@@ -2448,38 +2554,79 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = p_somente_pagamento_multa_checked_resolucoes_4.innerText;
 
 
+                // elemento deve aparecer no voto
+
+                let input_alteracao_multa_sim = document.getElementById("input_alteracao_multa_sim");
+                input_alteracao_multa_sim.checked = false;
+                let input_alteracao_multa_nao = document.getElementById("input_alteracao_multa_nao");
+                input_alteracao_multa_nao.checked = false;
+
+    
+
+                let span_multa_paga_voto = document.getElementById("span_multa_paga_voto");
+
+                
+                let span_multa_paga_voto_final = document.getElementById("span_multa_paga_voto_final");
 
 
-                if (input_alteracao_multa_sim.checked) {
-                    let span_corresp_alteracao_multa_sim_1 = document.getElementById("span_corresp_alteracao_multa_sim_1");
-                    let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
-
-                    let span_corresp_alteracao_multa_sim_1_final = document.getElementById("span_corresp_alteracao_multa_sim_1_final");
-                    let span_corresp_alteracao_multa_sim_2_final = document.getElementById("span_corresp_alteracao_multa_sim_2_final");
-
-                    span_corresp_alteracao_multa_sim_1_final.innerText = span_corresp_alteracao_multa_sim_1.innerText;
-                    span_corresp_alteracao_multa_sim_2_final.innerText = span_corresp_alteracao_multa_sim_2.innerText;
+                span_multa_paga_voto_final.innerText = span_multa_paga_voto.innerText;
 
 
-                    
 
-                } else if (input_alteracao_multa_nao.checked) {
-                    let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
-
-                    let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
-
-                    span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
-                    
-                    
-                } else {
-
-                    console.log("Preencha o campo Houve alteração de multa?")
-                }
 
                 
             } else {
 
-                // limpar conteudo verificar
+                span_somente_pagamento_multa_checked_1_final.innerText = "";
+                input_somente_pagamento_multa_checked_1_final.innerText = "";
+                span_somente_pagamento_multa_checked_2_final.innerText = "";
+                input_somente_pagamento_multa_checked_2_final.innerText = "";
+
+                p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
+                p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
+                p_somente_pagamento_multa_checked_resolucoes_3_final.innerText = "";
+                p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = "";
+
+                span_multa_paga_voto_final.innerText = "";
+
+
+
+
+            }
+
+            // Se houve alteração da multa
+
+
+            // parei aqui
+            if (input_alteracao_multa_sim.checked) {
+                let span_corresp_alteracao_multa_sim_1 = document.getElementById("span_corresp_alteracao_multa_sim_1");
+                let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+
+                let span_corresp_alteracao_multa_sim_1_final = document.getElementById("span_corresp_alteracao_multa_sim_1_final");
+                let span_corresp_alteracao_multa_sim_2_final = document.getElementById("span_corresp_alteracao_multa_sim_2_final");
+
+                span_corresp_alteracao_multa_sim_1_final.innerText = span_corresp_alteracao_multa_sim_1.innerText;
+                span_corresp_alteracao_multa_sim_2_final.innerText = span_corresp_alteracao_multa_sim_2.innerText;
+
+            } else {
+
+                span_corresp_alteracao_multa_sim_1_final.innerText = "";
+                span_corresp_alteracao_multa_sim_2_final.innerText = "";
+
+            }
+                    
+
+            if (input_alteracao_multa_nao.checked) {
+                let span_alteracao_multa_nao = document.getElementById("span_alteracao_multa_nao");
+
+                let span_alteracao_multa_nao_final = document.getElementById("span_alteracao_multa_nao_final");
+
+                span_alteracao_multa_nao_final.innerText = span_alteracao_multa_nao.innerText;
+                
+                
+            } else {
+
+                span_alteracao_multa_nao_final.innerText = "";
             }
 
             
@@ -2491,45 +2638,73 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             div_resolucoes_fixa_final.appendChild(div_resolucoes_fixa.cloneNode(true))
 
 
+            // Calculadora de dosimetria
+            let div_calculadora = document.getElementById('calculadora');
+            
+            if (div_calculadora.classList.contains('show')) {
+                
+
+                console.log("expandido");
+
+                let dosimetria_resolucao_1 = document.getElementById("dosimetria_resolucao_1");
+                let dosimetria_resolucao_2 = document.getElementById("dosimetria_resolucao_2");
+                let dosimetria_resolucao_3 = document.getElementById("dosimetria_resolucao_3");
+                let dosimetria_resolucao_4 = document.getElementById("dosimetria_resolucao_4");
+
+                let dosimetria_resolucao_1_final = document.getElementById("dosimetria_resolucao_1_final");
+                let dosimetria_resolucao_2_final = document.getElementById("dosimetria_resolucao_2_final");
+                let dosimetria_resolucao_3_final = document.getElementById("dosimetria_resolucao_3_final");
+                let dosimetria_resolucao_4_final = document.getElementById("dosimetria_resolucao_4_final");
+
+                dosimetria_resolucao_1_final.innerText = dosimetria_resolucao_1.innerText;
+                dosimetria_resolucao_2_final.innerText = dosimetria_resolucao_2.innerText;
+                dosimetria_resolucao_3_final.innerText = dosimetria_resolucao_3.innerText;
+                dosimetria_resolucao_4_final.innerText = dosimetria_resolucao_4.innerText;
+
+                // tabela,
+
+                let tabela_resumo = document.getElementById("tabela_resumo");
+                let tabela_resumo_final = document.getElementById("tabela_resumo_final");
+                tabela_resumo_final.innerHTML = tabela_resumo.outerHTML;
 
 
-            // let p_resolucoes_fixo_1 = document.getElementById("p_resolucoes_fixo_1");
-            // let p_resolucoes_fixo_2 = document.getElementById("p_resolucoes_fixo_2");
-            // let p_resolucoes_fixo_3 = document.getElementById("p_resolucoes_fixo_3");
-            // let p_resolucoes_fixo_4 = document.getElementById("p_resolucoes_fixo_4");
-            // let p_resolucoes_fixo_5 = document.getElementById("p_resolucoes_fixo_5");
-            // let p_resolucoes_fixo_6 = document.getElementById("p_resolucoes_fixo_6");
-            // let p_resolucoes_fixo_7 = document.getElementById("p_resolucoes_fixo_7");
-            // let p_resolucoes_fixo_8 = document.getElementById("p_resolucoes_fixo_8");
-            // let p_resolucoes_fixo_9 = document.getElementById("p_resolucoes_fixo_9");
-            // let p_resolucoes_fixo_10 = document.getElementById("p_resolucoes_fixo_10");
-            // let p_resolucoes_fixo_11= document.getElementById("p_resolucoes_fixo_11");
 
-            // let p_resolucoes_fixo_1_final = document.getElementById("p_resolucoes_fixo_1_final");
-            // let p_resolucoes_fixo_2_final = document.getElementById("p_resolucoes_fixo_2_final");
-            // let p_resolucoes_fixo_3_final = document.getElementById("p_resolucoes_fixo_3_final");
-            // let p_resolucoes_fixo_4_final = document.getElementById("p_resolucoes_fixo_4_final");
-            // let p_resolucoes_fixo_5_final = document.getElementById("p_resolucoes_fixo_5_final");
-            // let p_resolucoes_fixo_6_final = document.getElementById("p_resolucoes_fixo_6_final");
-            // let p_resolucoes_fixo_7_final = document.getElementById("p_resolucoes_fixo_7_final");
-            // let p_resolucoes_fixo_8_final = document.getElementById("p_resolucoes_fixo_8_final");
-            // let p_resolucoes_fixo_9_final = document.getElementById("p_resolucoes_fixo_9_final");
-            // let p_resolucoes_fixo_10_final = document.getElementById("p_resolucoes_fixo_10_final");
-            // let p_resolucoes_fixo_11_final = document.getElementById("p_resolucoes_fixo_11_final");
+                let span_multa_superior_ou_inferior = document.getElementById("span_multa_superior_ou_inferior");
+                let span_multa_superior_ou_inferior_final = document.getElementById("span_multa_superior_ou_inferior_final");
+                span_multa_superior_ou_inferior_final.innerText = span_multa_superior_ou_inferior.innerText;
 
 
-            // p_resolucoes_fixo_1_final.innerHTML = p_resolucoes_fixo_1.innerHTML;
-            // p_resolucoes_fixo_2_final.innerText = p_resolucoes_fixo_2.innerText;
-            // p_resolucoes_fixo_3_final.innerText = p_resolucoes_fixo_3.innerText;
-            // p_resolucoes_fixo_4_final.innerText = p_resolucoes_fixo_4.innerText;
-            // p_resolucoes_fixo_5_final.innerText = p_resolucoes_fixo_5.innerText;
-            // p_resolucoes_fixo_6_final.innerText = p_resolucoes_fixo_6.innerText;
-            // p_resolucoes_fixo_7_final.innerText = p_resolucoes_fixo_7.innerText;
-            // p_resolucoes_fixo_8_final.innerText = p_resolucoes_fixo_8.innerText;
-            // p_resolucoes_fixo_9_final.innerText = p_resolucoes_fixo_9.innerText;
-            // p_resolucoes_fixo_10_final.innerText = p_resolucoes_fixo_10.innerText;
-            // p_resolucoes_fixo_11_final.innerText = p_resolucoes_fixo_11.innerText;
 
+
+
+
+
+            } else {
+                
+                console.log("não expandido");
+
+                dosimetria_resolucao_1_final.innerText = "";
+                dosimetria_resolucao_2_final.innerText = "";
+                dosimetria_resolucao_3_final.innerText = "";
+                dosimetria_resolucao_4_final.innerText = "";
+
+                tabela_resumo_final.innerHTML = "";
+
+
+
+
+                span_multa_superior_ou_inferior_final.innerText = "";
+
+
+
+            }
+            // parei aqui
+
+            // VOTO
+
+            let legend_voto = document.getElementById("legend_voto");
+            let p_voto_final = document.getElementById("p_voto_final");
+            p_voto_final.innerText = legend_voto.innerText;
 
 
 
@@ -2554,10 +2729,10 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             let assinatura_5_final = document.getElementById("assinatura_5_final");
 
 
-            assinatura_1_final.innerText = assinatura_1.value;
+            assinatura_1_final.innerText = assinatura_1.innerText;
             assinatura_2_final.innerText = assinatura_2.innerText;
-            assinatura_3_final.innerText = assinatura_3.value;
-            assinatura_4_final.innerText = assinatura_4.value;
+            assinatura_3_final.innerText = assinatura_3.innerText;
+            assinatura_4_final.innerText = assinatura_4.options[assinatura_4.selectedIndex].text;;
             assinatura_5_final.innerText = assinatura_5.innerText;
 
 
@@ -2569,7 +2744,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
 
 
             
-            fildset__relato_final.style.display = 'block';
+            fieldset_relato_final.style.display = 'block';
 
         }
 
@@ -2604,7 +2779,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             // Seleciona a tabela
             const tabela = document.getElementById('tab_cabecalho_final');
             // Seleciona o conteúdo da div
-            const conteudoRelato = document.getElementById('conteúdo_relato_final');
+            const conteudoRelato = document.getElementById('conteudo_relato_final');
 
             // Cria um intervalo para a seleção
             const range = document.createRange();
@@ -2691,9 +2866,9 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
         // ------------------------------------------------------------------------------------------------------------
         
         // Aplica a máscara quando o documento estiver pronto numero processo
-        $(document).ready(function() {
-            $('#input_num_processo').mask('000/0000');
-        });
+        // $(document).ready(function() {
+        //     $('#input_num_processo').mask('000/0000');
+        // });
 
         // // Aplica a máscara quando o documento estiver pronto data
         // $(document).ready(function() {
@@ -2708,6 +2883,18 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 $(this).mask('00/00/0000');
             });
         });
+
+
+        // Seleciona a div onde queremos inserir a data
+        let divData = document.getElementById('assinatura_3');
+        // Obtém a data atual do sistema
+        let dataAtual = new Date();
+        // Array com os nomes dos meses em português
+        let meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+        // Formata a data no formato desejado
+        let dataFormatada = ("0" + dataAtual.getDate()).slice(-2) + " de " + meses[dataAtual.getMonth()] + " de " + dataAtual.getFullYear();
+        // Insere a data formatada dentro da div
+        divData.textContent = dataFormatada;
 
 
         // ------------------------------------------------------------------------------------------------------------
@@ -2926,7 +3113,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 // Obter o valor da anuidade para o ano selecionado
                 var valorAnuidade = valoresAnuidade[anoSelecionado];
                 // Exibir o valor da anuidade no elemento HTML
-                document.getElementById('valor_anuidade').textContent = 'R$ ' + valorAnuidade.toFixed(2);
+                document.getElementById('valor_anuidade').textContent = 'R$ ' + valorAnuidade.toFixed(2).replace('.', ',');
                 // Atualizar o texto com o ano selecionado
                 document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em ' + anoSelecionado + ' (ano da Notificação Preventiva): ';
             } else {
@@ -2956,8 +3143,8 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
                 var valorMultaRes198 = valorAnuidadeBase * multiploAnuidade;
 
                 // Exibir o valor da multa no elemento HTML
-                document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2);
-                document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2);
+                document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+                document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
             } else {
                 // Se o valor do múltiplo de anuidade for 0 ou se o ano da notificação preventiva não foi selecionado,
                 // exibir uma mensagem indicando que é necessário selecionar o ano da notificação preventiva
@@ -2983,6 +3170,7 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
         // // Selecionar o elemento pai com o id "calculadora"
         // var calculadoraDiv = document.getElementById('calculadora');
 
+
         // Selecionar os checkboxes e selects dentro do div "calculadora"
         var inputs = calculadoraDiv.querySelectorAll('input[type="checkbox"], select');
 
@@ -2990,6 +3178,86 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
         inputs.forEach(function(input) {
             input.addEventListener('change', function() {
                 calcularMultaRes198();
+            });
+        });
+
+        function calcularMultaAplicada() {
+            var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
+
+            if (multiploAnuidade !== 0) {
+                var valorAnuidadeBase = document.getElementById('valor_anuidade').textContent.trim();
+                
+                if (valorAnuidadeBase !== 'Selecionar') {
+                    var valorMultaRes198 = parseFloat(document.getElementById('valor_multa_res198').textContent.replace('R$ ', ''));
+                    var valorMultaRes22 = document.getElementById('valorMultaRes22').value.trim();
+
+                    if (valorMultaRes22 === '') {
+                        // Se o campo da multa conforme a Resolução 22 estiver vazio, considerar o valor da Resolução 198
+                        var multaAplicada = valorMultaRes198;
+                        document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',');
+                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + multaAplicada.toFixed(2).replace('.', ',') + ' (Insira o valor da multa segundo a Resolução 22 para comparar os valores)';
+                        
+
+                        // indicar o valor da multa no voto
+                        let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+                        span_corresp_alteracao_multa_sim_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
+
+                    
+                    } else {
+                        valorMultaRes22 = valorMultaRes22.replace(/\./g, '');
+                        valorMultaRes22 = valorMultaRes22.replace(',', '.');
+                        valorMultaRes22 = parseFloat(valorMultaRes22);
+                        
+                        var multaAplicada = Math.min(valorMultaRes198, valorMultaRes22);
+                        document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',');
+
+                        if (valorMultaRes198 > valorMultaRes22) {
+                           
+                            
+                            document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', superior ao aplicado com base na Resolução 22/2012.';
+                           
+                            // indicar o valor da multa no voto
+                            let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+                            span_corresp_alteracao_multa_sim_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
+
+
+                   
+                        } else if (valorMultaRes198 < valorMultaRes22) {
+                            
+                            document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', inferior ao aplicado com base na Resolução 22/2012.';
+                       
+                            // indicar o valor da multa no voto
+                            let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+                            span_corresp_alteracao_multa_sim_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
+
+
+                       
+                        } else {
+                            
+                            document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', igual ao aplicado com base na Resolução 22/2012.';
+
+                            // indicar o valor da multa no voto
+                            let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
+                            span_corresp_alteracao_multa_sim_2.innerText = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',') + '.';
+
+
+                      
+                        }
+
+                    }
+                } else {
+                    document.getElementById('multa_aplicada').textContent = '';
+                }
+            } else {
+                document.getElementById('multa_aplicada').textContent = '';
+            }
+        }
+
+        // Adicionar event listener para chamar a função calcularMultaAplicada sempre que houver uma mudança nos valores
+        var inputs = document.querySelectorAll('input[type="checkbox"], select, #valorMultaRes22');
+        inputs.forEach(function(input) {
+            input.addEventListener('change', function() {
+                calcularMultaAplicada();
             });
         });
 
@@ -3088,6 +3356,13 @@ Diante do exposto acima, é evidente a infração ao exercício profissional com
             // Atualizar a descrição no elemento correspondente usando innerHTML
             document.getElementById(idDescricao).innerHTML = descricao;
         }
+
+
+
+
+        $(document).ready(function() {
+            $('#valorMultaRes22').mask('000.000.000.000.000,00', {reverse: true});
+            });
 
 
         </script>
