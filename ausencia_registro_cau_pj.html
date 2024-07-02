@@ -1137,7 +1137,7 @@
                                             
                                             <div class="d-flex">
                                                 <p class="d-flex my-1 align-items-center" style="font-weight: bold;" id="ano_notificacao">Valor da anuidade base (ano da Notificação Preventiva):</p>         
-                                                <p class="d-flex my-1 align-items-center ml-2" id="valor_anuidade">Selecionar</p>     
+                                                <p class="d-flex my-1 align-items-center ml-2" id="valor_anuidade_formatada">Selecionar</p>     
                                             </div> 
                                         
                                             
@@ -3138,13 +3138,15 @@
             if (valoresAnuidade.hasOwnProperty(anoSelecionado)) {
                 // Obter o valor da anuidade para o ano selecionado
                 var valorAnuidade = valoresAnuidade[anoSelecionado];
+                var valorAnuidadeFormatada = valorAnuidade.toFixed(2).replace('.', ',');
+
                 // Exibir o valor da anuidade no elemento HTML
-                document.getElementById('valor_anuidade').textContent = 'R$ ' + valorAnuidade.toFixed(2).replace('.', ',');
+                document.getElementById('valor_anuidade_formatada').textContent = 'R$ ' + valorAnuidadeFormatada;
                 // Atualizar o texto com o ano selecionado
                 document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em ' + anoSelecionado + ' (ano da Notificação Preventiva): ';
             } else {
                 // Se o ano selecionado não estiver presente no objeto de valores da anuidade, exibir uma mensagem de erro
-                document.getElementById('valor_anuidade').textContent = '';
+                document.getElementById('valor_anuidade_formatada').textContent = '';
                 document.getElementById('ano_notificacao').textContent = 'Valor da anuidade base em (ano da Notificação Preventiva): ';
             }
         }
@@ -3163,8 +3165,8 @@
             // Verificar se o valor do múltiplo de anuidade é maior que 0 e se o ano da notificação preventiva foi selecionado
             if (multiploAnuidade > 0 && document.getElementById('inputGroupSelect01').value !== 'Selecionar') {
                 // Obter o valor da anuidade base
-                var valorAnuidadeBase = valoresAnuidade[anoSelecionado];
-
+                var valorAnuidadeBase = parseFloat(document.getElementById('valor_anuidade').textContent.replace('R$ ', ''));
+                
 
                 // Calcular o valor da multa conforme a Resolução 198
                 var valorMultaRes198 = valorAnuidadeBase * multiploAnuidade;
