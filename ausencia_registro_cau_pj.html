@@ -3165,7 +3165,7 @@
             // Verificar se o valor do múltiplo de anuidade é maior que 0 e se o ano da notificação preventiva foi selecionado
             if (multiploAnuidade > 0 && document.getElementById('inputGroupSelect01').value !== 'Selecionar') {
                 // Obter o valor da anuidade base
-                var valorAnuidadeBase = parseFloat(document.getElementById('valor_anuidade').textContent.replace('R$ ', ''));
+                var valorAnuidadeBase = valorAnuidade;
                 
 
                 // Calcular o valor da multa conforme a Resolução 198
