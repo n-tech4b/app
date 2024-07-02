@@ -3157,7 +3157,30 @@
             calcularAnuidade();
         });
 
-        // Função para calcular e exibir o valor da multa conforme a Resolução 198
+        // // Função para calcular e exibir o valor da multa conforme a Resolução 198
+        // function calcularMultaRes198() {
+        //     // Obter o valor do múltiplo de anuidade
+        //     var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
+
+        //     // Verificar se o valor do múltiplo de anuidade é maior que 0 e se o ano da notificação preventiva foi selecionado
+        //     if (multiploAnuidade > 0 && document.getElementById('inputGroupSelect01').value !== 'Selecionar') {
+        //         // Obter o valor da anuidade base
+        //         var valorAnuidadeBase = valorAnuidade;
+                
+
+        //         // Calcular o valor da multa conforme a Resolução 198
+        //         var valorMultaRes198 = valorAnuidadeBase * multiploAnuidade;
+
+        //         // Exibir o valor da multa no elemento HTML
+        //         document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+        //         document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+        //     } else {
+        //         // Se o valor do múltiplo de anuidade for 0 ou se o ano da notificação preventiva não foi selecionado,
+        //         // exibir uma mensagem indicando que é necessário selecionar o ano da notificação preventiva
+        //         document.getElementById('valor_multa_res198').textContent = ''; //em branco
+        //     }
+        // }
+
         function calcularMultaRes198() {
             // Obter o valor do múltiplo de anuidade
             var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
@@ -3177,12 +3200,23 @@
                     // Exibir o valor da multa no elemento HTML
                     document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
                     document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+                } else {
+                    // Se o ano selecionado não estiver presente no objeto de valores da anuidade, exibir uma mensagem de erro
+                    document.getElementById('valor_multa_res198').textContent = 'Ano selecionado não encontrado.';
+                    document.getElementById('valor_multa_res198_final').textContent = '';
+                }
             } else {
                 // Se o valor do múltiplo de anuidade for 0 ou se o ano da notificação preventiva não foi selecionado,
                 // exibir uma mensagem indicando que é necessário selecionar o ano da notificação preventiva
-                document.getElementById('valor_multa_res198').textContent = ''; //em branco
+                document.getElementById('valor_multa_res198').textContent = 'É necessário selecionar o ano da notificação preventiva.';
+                document.getElementById('valor_multa_res198_final').textContent = '';
             }
         }
+        
+
+
+
+
 
 
 
