@@ -3247,7 +3247,12 @@
             var multiploAnuidade = parseInt(document.getElementById('multiplo_anuidade').textContent);
 
             if (multiploAnuidade !== 0) {
-                var valorAnuidadeBase = document.getElementById('valor_anuidade').textContent.trim();
+
+                if (valoresAnuidade.hasOwnProperty(anoSelecionado)) {
+                    // Obter o valor da anuidade base
+                    var valorAnuidadeBase = valoresAnuidade[anoSelecionado];
+                
+                }
                 
                 if (valorAnuidadeBase !== 'Selecionar') {
                     var valorMultaRes198 = parseFloat(document.getElementById('valor_multa_res198').textContent.replace('R$ ', ''));
