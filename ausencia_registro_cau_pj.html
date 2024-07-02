@@ -3338,8 +3338,6 @@
                         valorMultaRes22 = valorMultaRes22.replace(/\./g, '');
                         valorMultaRes22 = valorMultaRes22.replace(',', '.');
                         valorMultaRes22 = parseFloat(valorMultaRes22);
-                    } else {
-                        valorMultaRes22 = valorMultaRes198; // Se vazio, considerar o valor da Resolução 198
                     }
 
                     // Calcular a multa aplicada
@@ -3347,13 +3345,16 @@
                     document.getElementById('multa_aplicada').textContent = 'R$ ' + multaAplicada.toFixed(2).replace('.', ',');
 
                     // Atualizar o texto com a comparação dos valores
-                    if (valorMultaRes198 > valorMultaRes22) {
-                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', superior ao aplicado com base na Resolução 22/2012.';
+                    if (valorMultaRes22 === '') {
+                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + multaAplicada.toFixed(2).replace('.', ',') + ".";
+                    } else if (valorMultaRes198 > valorMultaRes22) {
+                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + multaAplicada.toFixed(2).replace('.', ',') + ', superior ao aplicado com base na Resolução 22/2012.';
                     } else if (valorMultaRes198 < valorMultaRes22) {
-                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', inferior ao aplicado com base na Resolução 22/2012.';
-                    } else {
-                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + valorMultaRes198.toFixed(2).replace('.', ',') + ', igual ao aplicado com base na Resolução 22/2012.';
+                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + multaAplicada.toFixed(2).replace('.', ',') + ', inferior ao aplicado com base na Resolução 22/2012.';
+                    } else if (valorMultaRes198 === valorMultaRes22) {
+                        document.getElementById('span_multa_superior_ou_inferior').textContent = 'Chegamos ao valor de R$ ' + multaAplicada.toFixed(2).replace('.', ',') + ', igual ao aplicado com base na Resolução 22/2012.';
                     }
+
 
                     // Atualizar o texto no elemento span_corresp_alteracao_multa_sim_2
                     let span_corresp_alteracao_multa_sim_2 = document.getElementById("span_corresp_alteracao_multa_sim_2");
