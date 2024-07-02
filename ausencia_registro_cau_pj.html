@@ -3164,26 +3164,25 @@
 
             // Verificar se o valor do múltiplo de anuidade é maior que 0 e se o ano da notificação preventiva foi selecionado
             if (multiploAnuidade > 0 && document.getElementById('inputGroupSelect01').value !== 'Selecionar') {
-                // Obter o valor da anuidade base
-                var valorAnuidadeBase = valorAnuidade;
-                
+                // Obter o ano selecionado
+                var anoSelecionado = parseInt(selectAno.value);
+                // Verificar se o ano selecionado está presente no objeto de valores da anuidade
+                if (valoresAnuidade.hasOwnProperty(anoSelecionado)) {
+                    // Obter o valor da anuidade base
+                    var valorAnuidadeBase = valoresAnuidade[anoSelecionado];
 
-                // Calcular o valor da multa conforme a Resolução 198
-                var valorMultaRes198 = valorAnuidadeBase * multiploAnuidade;
+                    // Calcular o valor da multa conforme a Resolução 198
+                    var valorMultaRes198 = valorAnuidadeBase * multiploAnuidade;
 
-                // Exibir o valor da multa no elemento HTML
-                document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
-                document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+                    // Exibir o valor da multa no elemento HTML
+                    document.getElementById('valor_multa_res198').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
+                    document.getElementById('valor_multa_res198_final').textContent = 'R$ ' + valorMultaRes198.toFixed(2).replace('.', ',');
             } else {
                 // Se o valor do múltiplo de anuidade for 0 ou se o ano da notificação preventiva não foi selecionado,
                 // exibir uma mensagem indicando que é necessário selecionar o ano da notificação preventiva
                 document.getElementById('valor_multa_res198').textContent = ''; //em branco
             }
         }
-
-
-
-
 
 
 
