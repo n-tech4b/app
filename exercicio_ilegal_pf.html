@@ -1389,7 +1389,7 @@
 
                         <span class="d-flex justify-content-center" contenteditable="true">&nbsp;
                             
-                            <select class="form-control form-control-sm d-inline text-center" style="text-align: center; width: 300px;" id="assinatura_4">
+                            <select class="form-control form-control-sm d-inline text-center" style="text-align: center; width: 300px;" id="assinatura_4" onchange="inserirAssinaturas()">
                                 <option value="M" >Selecione o nome do Conselheiro/a relator/a.</option>
                                 <option value="M">---------- Conselheiros ----------</option>
                                 <option value="F">Renata Ballone</option>
@@ -3471,6 +3471,30 @@
             });
             // Atualizar a descrição no elemento correspondente usando innerHTML
             document.getElementById(idDescricao).innerHTML = descricao;
+        }
+
+        function inserirAssinaturas() {
+            // Seleciona o elemento <select> com id "assinatura_4"
+            var selectElement = document.getElementById('assinatura_4');
+            
+            // Obtém o valor selecionado no <select>
+            var selectedValue = selectElement.value;
+            
+            // Define o texto base dependendo do valor selecionado
+            var textoBase = selectedValue === 'F' ? 'Conselheira da CEP-CAU/SP' : 'Conselheiro da CEP-CAU/SP';
+
+            // Seleciona a div onde queremos inserir o texto
+            var divAssinatura = document.getElementById('assinatura_5');
+
+            // Limpa o conteúdo existente da div
+            divAssinatura.innerHTML = '';
+
+            // Cria um elemento <strong> para o texto
+            var strongElement = document.createElement('strong');
+            strongElement.textContent = textoBase;
+
+            // Insere o elemento <strong> na div
+            divAssinatura.appendChild(strongElement);
         }
 
 
