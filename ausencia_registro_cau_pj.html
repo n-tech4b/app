@@ -1391,31 +1391,30 @@
 
 
                         <span class="d-flex justify-content-center" contenteditable="true">&nbsp;
-                            
-                            <select class="form-control form-control-sm d-inline text-center" style="text-align: center; width: 300px;" id="assinatura_4">
-                                <option value="" >Selecione o nome do Conselheiro/a relator/a.</option>
-                                <option value="">---------- Conselheiros ----------</option>
-                                <option value="">Renata Ballone</option>
-                                <option value="">Roberto Carlos Spina</option>
-                                <option value="">Adriana Corsini Menegolli</option>
-                                <option value="">Angela Hiromi Kamogari Baldan</option>
-                                <option value="">Danielle Skubs</option>
-                                <option value="">Edison Borges Lopes</option>
-                                <option value="">Marcelo de Oliveira Montoro</option>
-                                <option value="">Maria Jocelei Steck</option>
-                                <option value="">Mariângela Portela da Silva</option>
-                                <option value="">Reginaldo Peronti</option>
-                                <option value="">---------- Suplentes ----------</option>
-                                <option value="">Paula Francisca Ferreira da Silva</option>
-                                <option value="">Ana Maria Leao Wey</option>
-                                <option value="">Michelle da Silveira Rosa</option>
-                                <option value="">Maria Ligia Nakamura Guillen Vianna</option>
-                                <option value="">Camila Martins Mastrorocco</option>
-                                <option value="">Julia Mattos de Castro</option>
-                                <option value="">Selma Cristina de Sa Moreira Simoes</option>
-                                <option value="">Eduardo Nogueira Martins Ferreira</option>
-                                <option value="">Wesley Café Calazans</option>
-                                <option value="">Luiz Fisberg</option>
+                            <select class="form-control form-control-sm d-inline text-center" style="text-align: center; width: 300px;" id="assinatura_4" onchange="inserirAssinaturas()"></select>
+                                <option value="M" >Selecione o nome do Conselheiro/a relator/a.</option>
+                                <option value="M">---------- Conselheiros ----------</option>
+                                <option value="F">Renata Ballone</option>
+                                <option value="M">Roberto Carlos Spina</option>
+                                <option value="F">Adriana Corsini Menegolli</option>
+                                <option value="F">Angela Hiromi Kamogari Baldan</option>
+                                <option value="F">Danielle Skubs</option>
+                                <option value="M">Edison Borges Lopes</option>
+                                <option value="M">Marcelo de Oliveira Montoro</option>
+                                <option value="F">Maria Jocelei Steck</option>
+                                <option value="F">Mariângela Portela da Silva</option>
+                                <option value="M">Reginaldo Peronti</option>
+                                <option value="M">---------- Suplentes ----------</option>
+                                <option value="F">Paula Francisca Ferreira da Silva</option>
+                                <option value="F">Ana Maria Leao Wey</option>
+                                <option value="F">Michelle da Silveira Rosa</option>
+                                <option value="F">Maria Ligia Nakamura Guillen Vianna</option>
+                                <option value="F">Camila Martins Mastrorocco</option>
+                                <option value="F">Julia Mattos de Castro</option>
+                                <option value="F">Selma Cristina de Sa Moreira Simoes</option>
+                                <option value="M">Eduardo Nogueira Martins Ferreira</option>
+                                <option value="M">Wesley Café Calazans</option>
+                                <option value="M">Luiz Fisberg</option>
                             </select>
                         </span>
                         
@@ -3474,6 +3473,30 @@
             });
             // Atualizar a descrição no elemento correspondente usando innerHTML
             document.getElementById(idDescricao).innerHTML = descricao;
+        }
+
+        function inserirAssinaturas() {
+            // Seleciona o elemento <select> com id "assinatura_4"
+            var selectElement = document.getElementById('assinatura_4');
+            
+            // Obtém o valor selecionado no <select>
+            var selectedValue = selectElement.value;
+            
+            // Define o texto base dependendo do valor selecionado
+            var textoBase = selectedValue === 'F' ? 'Conselheira da CEP-CAU/SP' : 'Conselheiro da CEP-CAU/SP';
+
+            // Seleciona a div onde queremos inserir o texto
+            var divAssinatura = document.getElementById('assinatura_5');
+
+            // Limpa o conteúdo existente da div
+            divAssinatura.innerHTML = '';
+
+            // Cria um elemento <strong> para o texto
+            var strongElement = document.createElement('strong');
+            strongElement.textContent = textoBase;
+
+            // Insere o elemento <strong> na div
+            divAssinatura.appendChild(strongElement);
         }
 
 
