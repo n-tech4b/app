@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <!-- <link rel="stylesheet" href="style.css"> -->
          
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -1768,7 +1769,7 @@
             <button class="btn btn-sm btn-success mr-2 ml-2" id="btn_copiar" style="width: 90px;" onclick="copiar()"><strong>Copiar</strong></button>
 
             <!-- gerar pdf -->
-            <button class="btn btn-sm btn-secondary" id="btn_imprimir_pdf"  style="width: 90px;"><strong>Gerar PDF</strong></button>
+            <button class="btn btn-sm btn-secondary" id="btn_imprimir_pdf"  style="width: 90px;" onclick="printDiv('div_relato_final')"><strong>Imprimir</strong></button>
 
         </div>
 
@@ -1805,6 +1806,23 @@
 
 
         <script>
+
+        // IMPRIMIR_PDF
+        function printDiv(divId) {
+            var divContents = document.getElementById(divId).innerHTML;
+            var printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Relato Final</title>');
+            printWindow.document.write('<style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; margin: 20px; }');
+            printWindow.document.write('table { width: 100%; border-collapse: collapse; }');
+            printWindow.document.write('td, th { border: 1px solid black; padding: 8px; text-align: left; }');
+            printWindow.document.write('</style>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
 
         
 
@@ -2832,21 +2850,21 @@
 
         // gerar pdf ------------------------------------------------------------------------------------------------------------
 
-        document.getElementById('btn_imprimir_pdf').addEventListener('click', function() {
-            // Oculta todos os elementos que não estão dentro da div_relato
-            var elementosForaDivRelato = document.querySelectorAll('body > *:not(#div_relato_final)');
-            elementosForaDivRelato.forEach(function(elemento) {
-                elemento.style.display = 'none';
-            });
+        // document.getElementById('btn_imprimir_pdf').addEventListener('click', function() {
+        //     // Oculta todos os elementos que não estão dentro da div_relato
+        //     var elementosForaDivRelato = document.querySelectorAll('body > *:not(#div_relato_final)');
+        //     elementosForaDivRelato.forEach(function(elemento) {
+        //         elemento.style.display = 'none';
+        //     });
 
-            // Chama a função de impressão
-            window.print();
+        //     // Chama a função de impressão
+        //     window.print();
 
-            // Restaura a exibição dos elementos ocultos
-            elementosForaDivRelato.forEach(function(elemento) {
-                elemento.style.display = '';
-            });
-        });
+        //     // Restaura a exibição dos elementos ocultos
+        //     elementosForaDivRelato.forEach(function(elemento) {
+        //         elemento.style.display = '';
+        //     });
+        // });
 
 
 
