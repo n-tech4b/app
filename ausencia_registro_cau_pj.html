@@ -97,12 +97,16 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="https://n-tech4b.github.io/app/calculadora.html" target="_blank">Calculadora de Dosimetria</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="#" target="">Modelos</a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="">Resoluções</a>
+                            <a class="nav-link" href="https://n-tech4b.github.io/app/resolucoes.html" target="_blank">Resoluções</a>
                         </li>
                     </ul>
 
@@ -168,28 +172,28 @@
 
                     <!-- [lista suspensa]  -->
                     <select   class="form-control form-control-sm w-auto d-inline"  id="select_origem_demanda" contenteditable="true">
-                        <option value="">SELECIONE</option>
-                        <option value="">DENÚNCIA</option>
-                        <option value="">DILIGÊNCIA</option>
-                        <option value="">ROTINA</option>
+                        <option value="">Selecione</option>
+                        <option value="">denúncia</option>
+                        <option value="">diligência</option>
+                        <option value="">rotina</option>
                     </select>
 
-                    <span id="span_origem_demanda_2" contenteditable="true">da Fiscalização de REGIONAL</span>
+                    <span id="span_origem_demanda_2" contenteditable="true">da Fiscalização</span>
                     
                     <!-- [lista suspensa],  -->
                     <select class="form-control form-control-sm w-auto  d-inline" id="select_regional" >
-                        <option value="">SELECIONE</option>
-                        <option value="">SÃO PAULO</option>
-                        <option value="">BAURU</option>
-                        <option value="">CAMPINAS</option>
-                        <option value="">MOGI DAS CRUZES</option>
-                        <option value="">PRESIDENTE PRUDENTE</option>
-                        <option value="">RIBEIRÃO PRETO</option>
-                        <option value="">SANTOS</option>
-                        <option value="">ABC</option>
-                        <option value="">SÃO JOSÉ DOS CAMPOS</option>
-                        <option value="">SÃO JOSÉ DO RIO PRETO</option>
-                        <option value="">SOROCABO</option>
+                        <option value="">Selecione</option>
+                        <option value="">da sede de São Paulo</option>
+                        <option value="">da Regional de Bauru</option>
+                        <option value="">da Regional de Campinas</option>
+                        <option value="">da Regional de Mogi das Cruzes</option>
+                        <option value="">da Regional de Presidente Prudente</option>
+                        <option value="">da Regional de Ribeirão Preto</option>
+                        <option value="">da Regional de Santos</option>
+                        <option value="">da Regional do ABC</option>
+                        <option value="">da Regional de São José dos Campos</option>
+                        <option value="">da Regional de São José do Rio Preto</option>
+                        <option value="">da Regional de Sorocaba</option>
                     </select>
 
                     <span id="span_origem_demanda_3" contenteditable="true">
@@ -243,9 +247,17 @@
                     <span id="span_corresp_devolvida_sim_1">Houve</span>
                     
                     <!-- tentativas -->
-                    <input class="tentativas form-control form-control-sm w-auto d-inline mb-1" type="number" id="input_corresp_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;">
-                    
-                    <span id="span_corresp_devolvida_sim_2" contenteditable="true">tentativas de envio, sendo enviada novamente</span>
+                    <!-- <input class="tentativas form-control form-control-sm w-auto d-inline mb-1" type="number" id="input_corresp_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;"> -->
+                    <select   class="form-control form-control-sm w-50 d-inline" id="input_corresp_devolvida_sim_1" name="input_corresp_devolvida_sim_1" >
+                        <option value="">Selecione</option>
+                        <option value="">1 tentativa</option>
+                        <option value="">2 tentativas</option>
+                        <option value="">3 tentativas</option>
+                        <option value="">4 tentativas</option>
+                        <option value="">5 tentativas</option>
+                    </select>
+
+                    <span id="span_corresp_devolvida_sim_2" contenteditable="true">, sendo enviada novamente</span>
                     
                     <!-- opções de meio de envio -->
                     <select   class="form-control form-control-sm w-50 d-inline" id="select_corresp_devolvida_sim" name="select_corresp_devolvida_sim" >
@@ -360,25 +372,31 @@
                     <span id="span_corresp_auto_devolvida_sim_1">Houve</span>
                     
                     <!-- tentativas -->
+                    <!-- <input class="tentativas form-control form-control-sm w-50 d-inline mb-1" type="number" id="input_corresp_auto_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;"> -->
+                    <select   class="form-control form-control-sm w-50 d-inline" id="input_corresp_auto_devolvida_sim_1" name="input_corresp_auto_devolvida_sim_1" >
+                        <option value="">Selecione</option>
+                        <option value="">1 tentativa</option>
+                        <option value="">2 tentativas</option>
+                        <option value="">3 tentativas</option>
+                        <option value="">4 tentativas</option>
+                        <option value="">5 tentativas</option>
+                    </select>
                     
-                    <input class="tentativas form-control form-control-sm w-50 d-inline mb-1" type="number" id="input_corresp_auto_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;">
-
                     
-                    
-                    <span id="span_corresp_auto_devolvida_sim_2" contenteditable="true">tentativas de envio, sendo enviada novamente</span>
+                    <span id="span_corresp_auto_devolvida_sim_2" contenteditable="true">, sendo enviada novamente</span>
                     
                     <!-- opções de meio de envio -->
                     <select   class="form-control form-control-sm w-50 d-inline" id="select_corresp_auto_devolvida_sim" name="select_corresp_auto_devolvida_sim" >
                         <option value="Selecione">Selecione</option>
-                        <option value="cienciaPessoal">Por ciência pessoal</option>
-                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
-                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
-                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
-                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
-                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
-                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
-                        <option value="telegrama">Por telegrama</option>
-                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                        <option value="cienciaPessoal">por ciência pessoal</option>
+                        <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">por publicação no Diário Oficial</option>
+                        <option value="viaPostal">por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">por telegrama</option>
+                        <option value="aplicativosMensagens">por aplicativos de mensagens</option>
                     </select>
 
                     <span id="span_corresp_devolvida_auto_sim_3">, havendo ciência em</span>
@@ -396,15 +414,15 @@
                     
                     <!-- meio de envio -->
                     <select   class="form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_auto_devolvida_nao" name="select_corresp_auto_devolvida_nao" >
-                        <option value="cienciaPessoal">Por ciência pessoal</option>
-                        <option value="intermedioCAU">Por intermédio de agente do CAU/UF</option>
-                        <option value="editalCAUSP">Por edital publicado no site do CAU/SP</option>
-                        <option value="publicacaoDO">Por publicação no Diário Oficial</option>
-                        <option value="viaPostal">Por via postal, com aviso de recebimento</option>
-                        <option value="cienciaEletronica">Por ciência eletrônica pelo SICCAU</option>
-                        <option value="correioEletronico">Por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
-                        <option value="telegrama">Por telegrama</option>
-                        <option value="aplicativosMensagens">Por aplicativos de mensagens</option>
+                        <option value="cienciaPessoal">por ciência pessoal</option>
+                        <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
+                        <option value="editalCAUSP">por edital publicado no site do CAU/SP</option>
+                        <option value="publicacaoDO">por publicação no Diário Oficial</option>
+                        <option value="viaPostal">por via postal, com aviso de recebimento</option>
+                        <option value="cienciaEletronica">por ciência eletrônica pelo SICCAU</option>
+                        <option value="correioEletronico">por correio eletrônico no endereço de e-mail indicado no cadastro do profissional ou da pessoa jurídica</option>
+                        <option value="telegrama">por telegrama</option>
+                        <option value="aplicativosMensagens">por aplicativos de mensagens</option>
                     </select>
 
                     <span id="span_corresp_auto_devolvida_nao_2">, havendo ciência em </span>
@@ -1529,8 +1547,7 @@
 
                         <p>
                             <span id="span_corresp_devolvida_sim_1_final"></span>
-                            <span id="input_corresp_devolvida_sim_1_final"></span>
-                            <span id="span_corresp_devolvida_sim_2_final"></span>
+                            <span id="input_corresp_devolvida_sim_1_final"></span><span id="span_corresp_devolvida_sim_2_final"></span>
                             <span id="select_corresp_devolvida_sim_final"></span><span id="span_corresp_devolvida_sim_3_final"></span>
                             <span id="input_corresp_devolvida_sim_2_final"></span>
                         </p>
@@ -1560,8 +1577,7 @@
 
                         <p>
                             <span id="span_corresp_auto_devolvida_sim_1_final"></span>
-                            <span id="input_corresp_auto_devolvida_sim_1_final"></span>
-                            <span id="span_corresp_auto_devolvida_sim_2_final"></span>
+                            <span id="input_corresp_auto_devolvida_sim_1_final"></span><span id="span_corresp_auto_devolvida_sim_2_final"></span>
                             <span id="select_corresp_auto_devolvida_sim_final"></span><span id="span_corresp_devolvida_auto_sim_3_final"></span>
                             <span id="input_corresp_auto_devolvida_sim_2_final"></span>
                         </p>
@@ -2162,7 +2178,7 @@
                 let input_corresp_devolvida_sim_2_final = document.getElementById("input_corresp_devolvida_sim_2_final");
 
                 span_corresp_devolvida_sim_1_final.innerText = span_corresp_devolvida_sim_1.innerText;
-                input_corresp_devolvida_sim_1_final.innerText = input_corresp_devolvida_sim_1.value;
+                input_corresp_devolvida_sim_1_final.innerText = input_corresp_devolvida_sim_1.options[input_corresp_devolvida_sim_1.selectedIndex].textContent;
                 span_corresp_devolvida_sim_2_final.innerText = span_corresp_devolvida_sim_2.innerText;
                 select_corresp_devolvida_sim_final.innerText = select_corresp_devolvida_sim.options[select_corresp_devolvida_sim.selectedIndex].textContent;
                 span_corresp_devolvida_sim_3_final.innerText = span_corresp_devolvida_sim_3.innerText;
@@ -2287,7 +2303,7 @@
                 
                 
                 span_corresp_auto_devolvida_sim_1_final.innerText = span_corresp_auto_devolvida_sim_1.innerText;
-                input_corresp_auto_devolvida_sim_1_final.innerText = input_corresp_auto_devolvida_sim_1.value;
+                input_corresp_auto_devolvida_sim_1_final.innerText = input_corresp_auto_devolvida_sim_1.options[input_corresp_auto_devolvida_sim_1.selectedIndex].textContent;
                 span_corresp_auto_devolvida_sim_2_final.innerText = span_corresp_auto_devolvida_sim_2.innerText;
                 select_corresp_auto_devolvida_sim_final.innerText = select_corresp_auto_devolvida_sim.options[select_corresp_auto_devolvida_sim.selectedIndex].textContent;
                 span_corresp_devolvida_auto_sim_3_final.innerText = span_corresp_devolvida_auto_sim_3.innerText;
