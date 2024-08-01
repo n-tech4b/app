@@ -1490,6 +1490,9 @@
 
                 <div id="div_relato_final" >
 
+                    <!-- <div>
+                        <img src="logo1.jpg" class="img-fluid" alt="Descrição da imagem">
+                    </div> -->
                     
 
                     <!-- tabela final -->
@@ -1734,18 +1737,9 @@
                         
                         </p>
 
-
-
-
-
-                        
-
-   
-
- 
-
-
-                        
+                        <!-- <div>
+                            <img src="Rodape1.jpg" class="img-fluid" alt="Descrição da imagem">
+                        </div>               -->
                         
                         
 
@@ -1825,22 +1819,45 @@
 
         <script>
 
-        // IMPRIMIR_PDF
         function printDiv(divId) {
             var divContents = document.getElementById(divId).innerHTML;
             var printWindow = window.open('', '', 'height=600,width=800');
+            
+            // Adicionando conteúdo HTML para a impressão
             printWindow.document.write('<html><head><title>Relato Final</title>');
+            
+            // Adicionando estilos para o cabeçalho, rodapé e layout da impressão
             printWindow.document.write('<style>');
-            printWindow.document.write('body { font-family: Arial, sans-serif; margin: 20px; }');
-            printWindow.document.write('table { width: 100%; border-collapse: collapse; }');
-            printWindow.document.write('td, th { border: 1px solid black; padding: 8px; text-align: left; }');
+            printWindow.document.write('body { font-family: Arial, sans-serif; margin: 0; padding: 20; }');
+            printWindow.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; border: 1px solid #000; background-color: #f1f1f1; }');
+            printWindow.document.write('header { top: 0; }');
+            printWindow.document.write('footer { bottom: 0; }');
+            printWindow.document.write('header img, footer img { width: 100%; height: auto; }');
+            printWindow.document.write('@page { margin: 60px 0; }'); // Margem para o cabeçalho e rodapé
+            printWindow.document.write('.content { margin: 60px 0; }'); // Espaço para o cabeçalho e rodapé
             printWindow.document.write('</style>');
-            printWindow.document.write('</head><body >');
+            printWindow.document.write('</head><body>');
+            
+            // Adicionando cabeçalho
+            printWindow.document.write('<header>');
+            printWindow.document.write('<img src="logo1.jpg" alt="Cabeçalho">');
+            printWindow.document.write('</header>');
+            
+            // Adicionando conteúdo da div
+            printWindow.document.write('<div class="content">');
             printWindow.document.write(divContents);
+            printWindow.document.write('</div>');
+            
+            // Adicionando rodapé
+            printWindow.document.write('<footer>');
+            printWindow.document.write('<img src="rodape1.jpg" alt="Rodapé">');
+            printWindow.document.write('</footer>');
+            
             printWindow.document.write('</body></html>');
             printWindow.document.close();
             printWindow.print();
         }
+
 
         
 
