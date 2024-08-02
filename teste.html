@@ -1835,6 +1835,8 @@
             // Adicionando estilos para o cabeçalho, rodapé e layout da impressão
             janela.document.write('<style>');
             janela.document.write('body { font-family: Arial, sans-serif;}');
+            janela.document.write('table { width: 100%; border-collapse: collapse; }');
+            janela.document.write('td, th { border: 1px solid black; padding: 8px; text-align: left; }');
             janela.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; }');
             janela.document.write('header { top: 0; }');
             janela.document.write('footer { bottom: 0; }');
@@ -1873,6 +1875,7 @@
                 janela.print();
             };
         }
+        
 
 
         
