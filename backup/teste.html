@@ -1820,53 +1820,42 @@
         <script>
 
         function printDiv(divId) {
-            
-            var conteudo = document.getElementById(divId).innerHTML;
-
-            var logo = '<img src="logo1.jpg" alt="Cabeçalho">'
-            
-            var janela = window.open('', '', 'height=700,width=900');
+            var divContents = document.getElementById(divId).innerHTML;
+            var printWindow = window.open('', '', 'height=600,width=800');
             
             // Adicionando conteúdo HTML para a impressão
-            janela.document.write('<html><head>');
-            janela.document.write('<title>Relato Final</title>');
+            printWindow.document.write('<html><head><title>Relato Final</title>');
             
             // Adicionando estilos para o cabeçalho, rodapé e layout da impressão
-            janela.document.write('<style>');
-            janela.document.write('body { font-family: Arial, sans-serif; margin: 0; padding: 20; }');
-            janela.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; border: 1px solid #000; background-color: #f1f1f1; }');
-            janela.document.write('header { top: 0; }');
-            janela.document.write('footer { bottom: 0; }');
-            janela.document.write('header img, footer img { width: 100%; height: auto; }');
-            janela.document.write('@page { margin: 60px 0; }'); // Margem para o cabeçalho e rodapé
-            janela.document.write('.content { margin: 60px 0; }'); // Espaço para o cabeçalho e rodapé
-            janela.document.write('</style>');
-
-            janela.document.write('</head><body>');
+            printWindow.document.write('<style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; margin: 0; padding: 20; }');
+            printWindow.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; border: 1px solid #000; background-color: #f1f1f1; }');
+            printWindow.document.write('header { top: 0; }');
+            printWindow.document.write('footer { bottom: 0; }');
+            printWindow.document.write('header img, footer img { width: 100%; height: auto; }');
+            printWindow.document.write('@page { margin: 60px 0; }'); // Margem para o cabeçalho e rodapé
+            printWindow.document.write('.content { margin: 60px 0; }'); // Espaço para o cabeçalho e rodapé
+            printWindow.document.write('</style>');
+            printWindow.document.write('</head><body>');
             
-
-                
             // Adicionando cabeçalho
-            janela.document.write('<header>');
-            janela.document.write(logo);
-            janela.document.write('</header>');
+            printWindow.document.write('<header>');
+            printWindow.document.write('<img src="logo1.jpg" alt="Cabeçalho">');
+            printWindow.document.write('</header>');
             
             // Adicionando conteúdo da div
-            janela.document.write('<div class="content">');
-            janela.document.write(conteudo);
-            janela.document.write('</div>');
+            printWindow.document.write('<div class="content">');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</div>');
             
             // Adicionando rodapé
-            janela.document.write('<footer>');
-            janela.document.write('<img src="rodape1.jpg" alt="Rodapé">');
-            janela.document.write('</footer>');
-        
-            janela.document.write('</body></html>');
-
+            printWindow.document.write('<footer>');
+            printWindow.document.write('<img src="rodape1.jpg" alt="Rodapé">');
+            printWindow.document.write('</footer>');
             
-            
-            janela.document.close();
-            janela.print();
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
         }
 
 
