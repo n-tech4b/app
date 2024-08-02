@@ -1837,9 +1837,9 @@
             janela.document.write('body { font-family: Arial, sans-serif;}');
             janela.document.write('table { width: 100%; border-collapse: collapse; }');
             janela.document.write('td, th { border: 1px solid black; padding: 8px; text-align: left; }');
-            janela.document.write('header, footer { left: 0; width: 100%; text-align: center; }');
+            janela.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; }');
             janela.document.write('header { top: 0; }');
-            janela.document.write('footer { position: fixed; bottom: 0; }');
+            janela.document.write('footer { bottom: 0; }');
             janela.document.write('header img, footer img { width: 100%; height: auto; }');
             janela.document.write('@page { margin: 30px 0; }'); // Margem para o cabeçalho e rodapé
             janela.document.write('.content { margin: 0px 60px; padding: 100px 0;}'); // Espaço para o cabeçalho e rodapé
@@ -1848,9 +1848,6 @@
             janela.document.write('</head><body>');
             
 
-                
-   
-            
                 
             // Adicionando cabeçalho
             janela.document.write('<header>');
