@@ -1823,7 +1823,8 @@
             
             var conteudo = document.getElementById(divId).innerHTML;
 
-            var logo = '<img src="logo1.jpg" alt="Cabeçalho">'
+            var cabecalho = '<img src="cabecalho.jpg" alt="Cabeçalho">'
+            var rodape = '<img src="rodape.jpg" alt="Cabeçalho">'
             
             var janela = window.open('', '', 'height=700,width=900');
             
@@ -1833,13 +1834,13 @@
             
             // Adicionando estilos para o cabeçalho, rodapé e layout da impressão
             janela.document.write('<style>');
-            janela.document.write('body { font-family: Arial, sans-serif; margin: 0; padding: 20; }');
-            janela.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; border: 1px solid #000; background-color: #f1f1f1; }');
+            janela.document.write('body { font-family: Arial, sans-serif;}');
+            janela.document.write('header, footer { position: fixed; left: 0; width: 100%; text-align: center; }');
             janela.document.write('header { top: 0; }');
             janela.document.write('footer { bottom: 0; }');
             janela.document.write('header img, footer img { width: 100%; height: auto; }');
-            janela.document.write('@page { margin: 60px 0; }'); // Margem para o cabeçalho e rodapé
-            janela.document.write('.content { margin: 60px 0; }'); // Espaço para o cabeçalho e rodapé
+            janela.document.write('@page { margin: 30px 0; }'); // Margem para o cabeçalho e rodapé
+            janela.document.write('.content { margin: 0px 60px; padding: 100px 0;}'); // Espaço para o cabeçalho e rodapé
             janela.document.write('</style>');
 
             janela.document.write('</head><body>');
@@ -1848,7 +1849,7 @@
                 
             // Adicionando cabeçalho
             janela.document.write('<header>');
-            janela.document.write(logo);
+            janela.document.write(cabecalho);
             janela.document.write('</header>');
             
             // Adicionando conteúdo da div
@@ -1858,7 +1859,7 @@
             
             // Adicionando rodapé
             janela.document.write('<footer>');
-            janela.document.write('<img src="rodape1.jpg" alt="Rodapé">');
+            janela.document.write(rodape);
             janela.document.write('</footer>');
         
             janela.document.write('</body></html>');
@@ -1866,7 +1867,11 @@
             
             
             janela.document.close();
-            janela.print();
+
+
+            janela.onload = function() {
+                janela.print();
+            };
         }
 
 
