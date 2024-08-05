@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container main {
+            flex: 1;
+        }
+        .printable-area {
+            display: none;
+        }
+        @media print {
+            body, html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .printable-area {
+                display: block;
+                position: relative;
+                min-height: 100vh;
+            }
+            .printable-area header, .printable-area footer {
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+            .printable-area header {
+                top: 0;
+            }
+            .printable-area footer {
+                bottom: 0;
+            }
+            .printable-area main {
+                margin-top: 100px; /* Adjust according to the height of the header */
+                margin-bottom: 100px; /* Adjust according to the height of the footer */
+                flex: 1;
+            }
+            .printable-area img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="img-fluid" src="cabecalho.jpg" alt="Cabeçalho">
+        </header>
+        <main>
+            <h1>Conteúdo Principal</h1>
+            <p>Este é o conteúdo que será impresso.</p>
+        </main>
+        <footer>
+            <img class="img-fluid" src="rodape.jpg" alt="Rodapé">
+        </footer>
+    </div>
+    <button class="btn btn-primary" onclick="printDiv('printableArea')">Imprimir</button>
+
+    <div id="printableArea" class="printable-area">
+        <header>
+            <img class="img-fluid" src="cabecalho.jpg" alt="Cabeçalho">
+        </header>
+        <main id="printContent"></main>
+        <footer>
+            <img class="img-fluid" src="rodape.jpg" alt="Rodapé">
+        </footer>
+    </div>
+
+    <script>
+        function printDiv(divId) {
+            var printContent = document.querySelector('main').innerHTML;
+            document.getElementById('printContent').innerHTML = printContent;
+            
+            var printArea = document.getElementById(divId);
+            var originalContent = document.body.innerHTML;
+
+            document.body.innerHTML = printArea.innerHTML;
+            window.print();
+            document.body.innerHTML = originalContent;
+            location.reload();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

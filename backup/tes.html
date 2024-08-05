@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Example</title>
+    <style>
+        @media print {
+            body {
+                counter-reset: page;
+            }
+
+            .page {
+                page-break-after: always;
+                position: relative;
+            }
+
+            .page::after {
+                counter-increment: page;
+                content: "Page " counter(page);
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 0.5cm;
+                font-size: 10pt;
+                color: gray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Exemplo de Impressão - Página 1</h1>
+        <p>Este é um exemplo de conteúdo na página 1 que será impresso com números de página.</p>
+    </div>
+    <div class="page">
+        <h1>Exemplo de Impressão - Página 2</h1>
+        <p>Este é um exemplo de conteúdo na página 2 que será impresso com números de página.</p>
+    </div>
+    <button onclick="printDiv()">Imprimir</button>
+
+    <script>
+        function printDiv() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar PDF com Cabeçalho e Rodapé</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #relato {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Geração de PDF com Cabeçalho e Rodapé</h1>
+    <p>Este exemplo cria um PDF com um cabeçalho e rodapé usando a biblioteca jsPDF.</p>
+
+    <div id="relato">
+        <!-- Conteúdo da <div> para ser incluído no PDF -->
+        <!-- Aqui está um exemplo longo de texto Lorem Ipsum -->
+
+        <img src="cabecalho.jpg" alt="">
+
+        <table><tr><td>oioioioioio</td></tr></table>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+        <!-- (Conteúdo adicional aqui) -->
+    </div>
+
+    <button id="generate-pdf">Gerar PDF</button>
+
+    <script>
+        document.getElementById('generate-pdf').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Configurações do cabeçalho e rodapé
+            const header = 'Cabeçalho do Documento';
+            const footer = 'Rodapé do Documento';
+            const headerHeight = 10; // Altura do cabeçalho
+            const footerHeight = 10; // Altura do rodapé
+            const margin = 10; // Margem de texto
+            const pageHeight = doc.internal.pageSize.height;
+
+            doc.setFontSize(12);
+            doc.text(header, margin, headerHeight);
+
+            // Captura o conteúdo da <div id="relato">
+            const divContent = document.getElementById('relato').innerHTML;
+
+            // Adiciona o conteúdo da <div> ao PDF
+            doc.setFontSize(10);
+            let yPosition = headerHeight + margin;
+
+            // Adiciona o texto ao PDF, quebra de linha automática
+            const lines = doc.splitTextToSize(divContent, doc.internal.pageSize.width - 2 * margin);
+            for (let i = 0; i < lines.length; i++) {
+                if (yPosition > pageHeight - footerHeight - margin) {
+                    doc.text(footer, margin, pageHeight - footerHeight);
+                    doc.addPage();
+                    yPosition = headerHeight + margin; // Reset yPosition para a nova página
+                    doc.text(header, margin, headerHeight); // Adiciona o cabeçalho na nova página
+                }
+                doc.text(lines[i], margin, yPosition);
+                yPosition += 10; // Ajuste o espaçamento entre linhas conforme necessário
+            }
+
+            // Adiciona o rodapé na última página
+            doc.text(footer, margin, pageHeight - footerHeight);
+
+            // Salvando o PDF
+            doc.save('exemplo-com-cabecalho-e-rodape.pdf');
+        });
+    </script>
+</body>
+</html>
