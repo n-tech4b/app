@@ -19,14 +19,20 @@
 
     <style>
         .dts {
-
-            width: 115px !important;
+            width: 100px !important;
+            height: 25px !important;
+            padding: 2px 4px !important;
 
         }
 
         .tentativas {
-
             width: 60px !important;
+        }
+
+        .selecao_personalizada {
+            height: 25px !important;
+            padding: 2px 4px !important;
+            margin-bottom: 3px !important;
         }
 
         body {
@@ -259,6 +265,10 @@
                 <!-- data  -->
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline" id="input_dt_relatorio_fisc"
                     placeholder="DD/MM/AAAA">
+                
+                <span id="span_dt_relatorio_fisc_1">.</span>
+
+                
 
             </p>
 
@@ -272,6 +282,7 @@
                 <!-- [DATA]  -->
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                     id="input_dt_notificacao_preventiva" placeholder="DD/MM/AAAA">
+                <span id="span_dt_notificacao_preventiva_2">.</span>
 
             </p>
 
@@ -280,11 +291,13 @@
                     correspondência?</strong></label><span style="font-style: italic;">&nbsp;(da Notificação
                 Preventiva)</span>
             <div id="div_devolucao_corresp">
+
                 <input type="checkbox" id="input_devolucao_corresp_sim">
                 <label for="input_devolucao_corresp_sim" id="lab_devolucao_corresp_sim">Sim</label>
 
                 <input type="checkbox" class="ml-2" id="input_devolucao_corresp_nao">
                 <label for="input_devolucao_corresp_nao" id="lab_devolucao_corresp_nao">Não</label>
+
             </div>
 
             <div class="card px-2 py-3" id="div_corresp_devolvida_sim" style="display: none;">
@@ -293,8 +306,8 @@
 
                 <!-- tentativas -->
                 <!-- <input class="tentativas form-control form-control-sm w-auto d-inline mb-1" type="number" id="input_corresp_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;"> -->
-                <select class="form-control form-control-sm w-50 d-inline" id="input_corresp_devolvida_sim_1"
-                    name="input_corresp_devolvida_sim_1">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline" id="input_corresp_devolvida_sim_1"
+                    name="input_corresp_devolvida_sim_1" style="width: 100px !important;">
                     <option value="">Selecione</option>
                     <option value="">1 tentativa</option>
                     <option value="">2 tentativas</option>
@@ -306,8 +319,8 @@
                 <span id="span_corresp_devolvida_sim_2" contenteditable="true">, sendo enviada novamente</span>
 
                 <!-- opções de meio de envio -->
-                <select class="form-control form-control-sm w-50 d-inline" id="select_corresp_devolvida_sim"
-                    name="select_corresp_devolvida_sim">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline" id="select_corresp_devolvida_sim"
+                    name="select_corresp_devolvida_sim" style="width: 300px !important;">
                     <option value="Selecione">Selecione</option>
                     <option value="cienciaPessoal">por ciência pessoal</option>
                     <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
@@ -327,6 +340,8 @@
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                     id="input_corresp_devolvida_sim_2" id="dataCienciaSim" placeholder="DD/MM/AAAA">
 
+                <span id="span_corresp_devolvida_sim_4">.</span>
+
                 <br>
 
             </div>
@@ -336,8 +351,8 @@
                 <span id="span_corresp_devolvida_nao_1">A Notificação foi enviada</span>
 
                 <!-- meio de envio -->
-                <select class="form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_devolvida_nao"
-                    name="select_corresp_devolvida_nao">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_devolvida_nao"
+                    name="select_corresp_devolvida_nao" style="width: 300px !important;">
                     <option value="Selecione">Selecione</option>
                     <option value="cienciaPessoal">por ciência pessoal</option>
                     <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
@@ -356,6 +371,8 @@
                 <!-- data ciencia -->
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                     id="input_corresp_devolvida_nao_1" placeholder="DD/MM/AAAA">
+
+                <span id="span_corresp_devolvida_nao_3">.</span>
 
                 <br>
 
@@ -416,6 +433,7 @@
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline" class="dts"
                     id="input_dt_auto" placeholder="DD/MM/AAAA">
 
+                <span id="span_dt_auto_1">.</span>
 
             </p>
 
@@ -436,8 +454,8 @@
 
                 <!-- tentativas -->
                 <!-- <input class="tentativas form-control form-control-sm w-50 d-inline mb-1" type="number" id="input_corresp_auto_devolvida_sim_1" min="1" max="99" placeholder="nº" style="width: 200px;"> -->
-                <select class="form-control form-control-sm w-50 d-inline" id="input_corresp_auto_devolvida_sim_1"
-                    name="input_corresp_auto_devolvida_sim_1">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline" id="input_corresp_auto_devolvida_sim_1"
+                    name="input_corresp_auto_devolvida_sim_1" style="width: 100px !important;">
                     <option value="">Selecione</option>
                     <option value="">1 tentativa</option>
                     <option value="">2 tentativas</option>
@@ -450,8 +468,8 @@
                 <span id="span_corresp_auto_devolvida_sim_2" contenteditable="true">, sendo enviada novamente</span>
 
                 <!-- opções de meio de envio -->
-                <select class="form-control form-control-sm w-50 d-inline" id="select_corresp_auto_devolvida_sim"
-                    name="select_corresp_auto_devolvida_sim">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline" id="select_corresp_auto_devolvida_sim"
+                    name="select_corresp_auto_devolvida_sim" style="width: 300px !important;">
                     <option value="Selecione">Selecione</option>
                     <option value="cienciaPessoal">por ciência pessoal</option>
                     <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
@@ -471,6 +489,8 @@
                 <input type="text" class="dts form-control form-control-sm w-50 d-inline"
                     id="input_corresp_auto_devolvida_sim_2" placeholder="DD/MM/AAAA">
 
+                <span id="span_corresp_devolvida_auto_sim_4">.</span>
+              
                 <br>
 
             </div>
@@ -480,8 +500,8 @@
                 <span id="span_corresp_auto_devolvida_nao_1">O Auto de Infração foi enviado </span>
 
                 <!-- meio de envio -->
-                <select class="form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_auto_devolvida_nao"
-                    name="select_corresp_auto_devolvida_nao">
+                <select class="selecao_personalizada form-control form-control-sm w-50 d-inline mb-1" id="select_corresp_auto_devolvida_nao"
+                    name="select_corresp_auto_devolvida_nao" style="width: 300px !important;">
                     <option value="cienciaPessoal">por ciência pessoal</option>
                     <option value="intermedioCAU">por intermédio de agente do CAU/UF</option>
                     <option value="editalCAUSP">por edital publicado no site do CAU/SP</option>
@@ -499,6 +519,8 @@
                 <!-- data ciencia -->
                 <input type="text" class="dts form-control form-control-sm w-auto d-inline" class="dts"
                     id="input_corresp_auto_devolvida_nao_1" placeholder="DD/MM/AAAA">
+
+                <span id="span_corresp_auto_devolvida_nao_3">.</span>
 
                 <br>
 
@@ -525,7 +547,7 @@
                     <div class="" style="display: none;" id="div_processo_revelia_checked">
                         <div class="border rounded px-2 py-3 ">
                             <span id="span_processo_revelia">Não houve manifestação por parte do interessado, seguindo o
-                                processo à revelia</span>
+                                processo à revelia.</span>
                         </div>
                     </div>
 
@@ -678,6 +700,7 @@
                     <!-- data  -->
                     <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                         id="input_somente_regularizacao_checked_2" placeholder="DD/MM/AAAA">
+                    <span id="span_somente_regularizacao_checked_3">.</span>    
                 </div>
             </div>
 
@@ -702,6 +725,9 @@
                     <!-- data  -->
                     <input type="text" class="dts form-control form-control-sm w-auto d-inline"
                         id="input_somente_pagamento_multa_checked_2" placeholder="DD/MM/AAAA">
+                    
+                    <span id="span_somente_pagamento_multa_checked_3">.</span>
+
                 </div>
 
             </div>
@@ -1781,35 +1807,37 @@
 
                     <p  id="p_historico_processo_final" style="font-weight: bold; text-transform: uppercase;"></p>                          
                     
-                    <p style="margin-bottom: 8px;" id="p_resumo_fatos_final"></p>
+                    <p style="margin-bottom: 8px;" id="p_resumo_fatos_final">
                         <span id="span_origem_demanda_1_final"></span>
                         <span id="select_origem_demanda_final" ></span>
                         <span id="span_origem_demanda_2_final" ></span>
-                        <span id="select_regional_final" ></span><span id="span_origem_demanda_3_final"></span>    
+                        <span id="select_regional_final" ></span><span id="span_origem_demanda_3_final"></span>
+                        <span id="area_irregularidade_final"></span>
+                    </p>
 
-                    <p id="area_irregularidade_final"></p>
+                    
 
                     <p>
                         <span id="span_dt_relatorio_fisc_final"></span>
-                        <span id="input_dt_relatorio_fisc_final" ></span>
+                        <span id="input_dt_relatorio_fisc_final" ></span><span id="span_dt_relatorio_fisc_1_final" ></span>
                     </p>
 
                     <p>
                         <span id="span_dt_notificacao_preventiva_final"></span>   
-                        <span id="input_dt_notificacao_preventiva_final"></span>
+                        <span id="input_dt_notificacao_preventiva_final"></span><span id="span_dt_notificacao_preventiva_2_final"></span>
                     </p>
 
                     <p>
                         <span id="span_corresp_devolvida_sim_1_final"></span>
                         <span id="input_corresp_devolvida_sim_1_final"></span><span id="span_corresp_devolvida_sim_2_final"></span>
                         <span id="select_corresp_devolvida_sim_final"></span><span id="span_corresp_devolvida_sim_3_final"></span>
-                        <span id="input_corresp_devolvida_sim_2_final"></span>
+                        <span id="input_corresp_devolvida_sim_2_final"></span><span id="span_corresp_devolvida_sim_4_final"></span>
                     </p>
 
                     <p>
                         <span id="span_corresp_devolvida_nao_1_final"></span>
                         <span id="select_corresp_devolvida_nao_final"></span><span id="span_corresp_devolvida_nao_2_final"></span>
-                        <span id="input_corresp_devolvida_nao_1_final"></span>
+                        <span id="input_corresp_devolvida_nao_1_final"></span><span id="span_corresp_devolvida_nao_3_final"></span>
                     </p>
 
                     <p>
@@ -1824,7 +1852,7 @@
 
                     <p>
                         <span id="span_dt_auto_final"></span>
-                        <span id="input_dt_auto_final"></span>
+                        <span id="input_dt_auto_final"></span><span id="span_dt_auto_1_final"></span>
                     </p>
 
 
@@ -1833,13 +1861,13 @@
                         <span id="span_corresp_auto_devolvida_sim_1_final"></span>
                         <span id="input_corresp_auto_devolvida_sim_1_final"></span><span id="span_corresp_auto_devolvida_sim_2_final"></span>
                         <span id="select_corresp_auto_devolvida_sim_final"></span><span id="span_corresp_devolvida_auto_sim_3_final"></span>
-                        <span id="input_corresp_auto_devolvida_sim_2_final"></span>
+                        <span id="input_corresp_auto_devolvida_sim_2_final"></span><span id="span_corresp_devolvida_auto_sim_4_final"></span>          
                     </p>
 
                     <p>
                         <span id="span_corresp_auto_devolvida_nao_1_final"></span>
                         <span id="select_corresp_auto_devolvida_nao_final"></span><span id="span_corresp_auto_devolvida_nao_2_final"></span>
-                        <span id="input_corresp_auto_devolvida_nao_1_final"></span>
+                        <span id="input_corresp_auto_devolvida_nao_1_final"></span><span id="span_corresp_auto_devolvida_nao_3_final"></span>
                     </p>
 
                     <p>
@@ -1881,14 +1909,14 @@
                     <p>
                         <span id="span_somente_regularizacao_checked_1_final"></span>
                         <span id="input_somente_regularizacao_checked_1_final"></span><span id="span_somente_regularizacao_checked_2_final"></span>
-                        <span id="input_somente_regularizacao_checked_2_final"></span>
+                        <span id="input_somente_regularizacao_checked_2_final"></span><span id="span_somente_regularizacao_checked_3_final"></span>
                     </p>
 
 
                     <p>
                         <span id="span_somente_pagamento_multa_checked_1_final"></span>
                         <span id="input_somente_pagamento_multa_checked_1_final"></span><span id="span_somente_pagamento_multa_checked_2_final"></span>
-                        <span id="input_somente_pagamento_multa_checked_2_final"></span>
+                        <span id="input_somente_pagamento_multa_checked_2_final"></span><span id="span_somente_pagamento_multa_checked_3_final"></span>
                     </p>
 
 
@@ -2422,23 +2450,29 @@
 
             let span_dt_relatorio_fisc = document.getElementById("span_dt_relatorio_fisc");
             let input_dt_relatorio_fisc = document.getElementById("input_dt_relatorio_fisc");
+            let span_dt_relatorio_fisc_1 = document.getElementById("span_dt_relatorio_fisc_1");
 
             let span_dt_relatorio_fisc_final = document.getElementById("span_dt_relatorio_fisc_final");
             let input_dt_relatorio_fisc_final = document.getElementById("input_dt_relatorio_fisc_final");
+            let span_dt_relatorio_fisc_1_final = document.getElementById("span_dt_relatorio_fisc_1_final");
 
             span_dt_relatorio_fisc_final.innerText = span_dt_relatorio_fisc.innerText;
             input_dt_relatorio_fisc_final.innerText = input_dt_relatorio_fisc.value;
+            span_dt_relatorio_fisc_1_final.innerText = span_dt_relatorio_fisc_1.innerText;
 
             // Data da notificação preventiva:
 
             let span_dt_notificacao_preventiva = document.getElementById("span_dt_notificacao_preventiva");
             let input_dt_notificacao_preventiva = document.getElementById("input_dt_notificacao_preventiva");
+            let span_dt_notificacao_preventiva_2 = document.getElementById("span_dt_notificacao_preventiva_2");
 
             let span_dt_notificacao_preventiva_final = document.getElementById("span_dt_notificacao_preventiva_final");
             let input_dt_notificacao_preventiva_final = document.getElementById("input_dt_notificacao_preventiva_final");
+            let span_dt_notificacao_preventiva_2_final = document.getElementById("span_dt_notificacao_preventiva_2_final");
 
             span_dt_notificacao_preventiva_final.innerText = span_dt_notificacao_preventiva.innerText;
             input_dt_notificacao_preventiva_final.innerText = input_dt_notificacao_preventiva.value;
+            span_dt_notificacao_preventiva_2_final.innerText = span_dt_notificacao_preventiva_2.innerText;
 
 
 
@@ -2457,6 +2491,7 @@
                 let select_corresp_devolvida_sim = document.getElementById("select_corresp_devolvida_sim");
                 let span_corresp_devolvida_sim_3 = document.getElementById("span_corresp_devolvida_sim_3");
                 let input_corresp_devolvida_sim_2 = document.getElementById("input_corresp_devolvida_sim_2");
+                let span_corresp_devolvida_sim_4 = document.getElementById("span_corresp_devolvida_sim_4");
 
                 let span_corresp_devolvida_sim_1_final = document.getElementById("span_corresp_devolvida_sim_1_final");
                 let input_corresp_devolvida_sim_1_final = document.getElementById("input_corresp_devolvida_sim_1_final");
@@ -2464,6 +2499,7 @@
                 let select_corresp_devolvida_sim_final = document.getElementById("select_corresp_devolvida_sim_final");
                 let span_corresp_devolvida_sim_3_final = document.getElementById("span_corresp_devolvida_sim_3_final");
                 let input_corresp_devolvida_sim_2_final = document.getElementById("input_corresp_devolvida_sim_2_final");
+                let span_corresp_devolvida_sim_4_final = document.getElementById("span_corresp_devolvida_sim_4_final");
 
                 span_corresp_devolvida_sim_1_final.innerText = span_corresp_devolvida_sim_1.innerText;
                 input_corresp_devolvida_sim_1_final.innerText = input_corresp_devolvida_sim_1.options[input_corresp_devolvida_sim_1.selectedIndex].textContent;
@@ -2471,6 +2507,7 @@
                 select_corresp_devolvida_sim_final.innerText = select_corresp_devolvida_sim.options[select_corresp_devolvida_sim.selectedIndex].textContent;
                 span_corresp_devolvida_sim_3_final.innerText = span_corresp_devolvida_sim_3.innerText;
                 input_corresp_devolvida_sim_2_final.innerText = input_corresp_devolvida_sim_2.value;
+                span_corresp_devolvida_sim_4_final.innerText = span_corresp_devolvida_sim_4.innerText;
 
 
             } else {
@@ -2481,6 +2518,7 @@
                 select_corresp_devolvida_sim_final.innerText = "";
                 span_corresp_devolvida_sim_3_final.innerText = "";
                 input_corresp_devolvida_sim_2_final.innerText = "";
+                span_corresp_devolvida_sim_4_final.innerText = "";
 
             }
 
@@ -2491,16 +2529,19 @@
                 let select_corresp_devolvida_nao = document.getElementById("select_corresp_devolvida_nao");
                 let span_corresp_devolvida_nao_2 = document.getElementById("span_corresp_devolvida_nao_2");
                 let input_corresp_devolvida_nao_1 = document.getElementById("input_corresp_devolvida_nao_1");
+                let span_corresp_devolvida_nao_3 = document.getElementById("span_corresp_devolvida_nao_3");
 
                 let span_corresp_devolvida_nao_1_final = document.getElementById("span_corresp_devolvida_nao_1_final");
                 let select_corresp_devolvida_nao_final = document.getElementById("select_corresp_devolvida_nao_final");
                 let span_corresp_devolvida_nao_2_final = document.getElementById("span_corresp_devolvida_nao_2_final");
                 let input_corresp_devolvida_nao_1_final = document.getElementById("input_corresp_devolvida_nao_1_final");
+                let span_corresp_devolvida_nao_3_final = document.getElementById("span_corresp_devolvida_nao_3_final");
 
                 span_corresp_devolvida_nao_1_final.innerText = span_corresp_devolvida_nao_1.innerText;
                 select_corresp_devolvida_nao_final.innerText = select_corresp_devolvida_nao.options[select_corresp_devolvida_nao.selectedIndex].textContent;
                 span_corresp_devolvida_nao_2_final.innerText = span_corresp_devolvida_nao_2.innerText;
                 input_corresp_devolvida_nao_1_final.innerText = input_corresp_devolvida_nao_1.value;
+                span_corresp_devolvida_nao_3_final.innerText = span_corresp_devolvida_nao_3.innerText;
 
             } else {
                 console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
@@ -2508,6 +2549,7 @@
                 select_corresp_devolvida_nao_final.innerText = "";
                 span_corresp_devolvida_nao_2_final.innerText = "";
                 input_corresp_devolvida_nao_1_final.innerText = "";
+                span_corresp_devolvida_nao_3_final.innerText = "";
 
 
 
@@ -2557,11 +2599,15 @@
 
             let span_dt_auto = document.getElementById("span_dt_auto");
             let input_dt_auto = document.getElementById("input_dt_auto");
+            let span_dt_auto_1 = document.getElementById("span_dt_auto_1");
+            
             let span_dt_auto_final = document.getElementById("span_dt_auto_final");
             let input_dt_auto_final = document.getElementById("input_dt_auto_final");
+            let span_dt_auto_1_final = document.getElementById("span_dt_auto_1_final");
 
             span_dt_auto_final.innerText = span_dt_auto.innerText;
             input_dt_auto_final.innerText = input_dt_auto.value;
+            span_dt_auto_1_final.innerText = span_dt_auto_1.innerText;
 
 
 
@@ -2580,6 +2626,7 @@
                 let select_corresp_auto_devolvida_sim = document.getElementById("select_corresp_auto_devolvida_sim");
                 let span_corresp_devolvida_auto_sim_3 = document.getElementById("span_corresp_devolvida_auto_sim_3");
                 let input_corresp_auto_devolvida_sim_2 = document.getElementById("input_corresp_auto_devolvida_sim_2");
+                let span_corresp_devolvida_auto_sim_4 = document.getElementById("span_corresp_devolvida_auto_sim_4");
 
                 let span_corresp_auto_devolvida_sim_1_final = document.getElementById("span_corresp_auto_devolvida_sim_1_final");
                 let input_corresp_auto_devolvida_sim_1_final = document.getElementById("input_corresp_auto_devolvida_sim_1_final");
@@ -2587,8 +2634,7 @@
                 let select_corresp_auto_devolvida_sim_final = document.getElementById("select_corresp_auto_devolvida_sim_final");
                 let span_corresp_devolvida_auto_sim_3_final = document.getElementById("span_corresp_devolvida_auto_sim_3_final");
                 let input_corresp_auto_devolvida_sim_2_final = document.getElementById("input_corresp_auto_devolvida_sim_2_final");
-
-
+                let span_corresp_devolvida_auto_sim_4_final = document.getElementById("span_corresp_devolvida_auto_sim_4_final");
 
                 span_corresp_auto_devolvida_sim_1_final.innerText = span_corresp_auto_devolvida_sim_1.innerText;
                 input_corresp_auto_devolvida_sim_1_final.innerText = input_corresp_auto_devolvida_sim_1.options[input_corresp_auto_devolvida_sim_1.selectedIndex].textContent;
@@ -2596,7 +2642,7 @@
                 select_corresp_auto_devolvida_sim_final.innerText = select_corresp_auto_devolvida_sim.options[select_corresp_auto_devolvida_sim.selectedIndex].textContent;
                 span_corresp_devolvida_auto_sim_3_final.innerText = span_corresp_devolvida_auto_sim_3.innerText;
                 input_corresp_auto_devolvida_sim_2_final.innerText = input_corresp_auto_devolvida_sim_2.value;
-
+                span_corresp_devolvida_auto_sim_4_final.innerText = span_corresp_devolvida_auto_sim_4.innerText;
 
             } else {
                 console.log("A opção 'Sim' não está selecionada.");
@@ -2606,6 +2652,7 @@
                 select_corresp_auto_devolvida_sim_final.innerText = "";
                 span_corresp_devolvida_auto_sim_3_final.innerText = "";
                 input_corresp_auto_devolvida_sim_2_final.innerText = "";
+                span_corresp_devolvida_auto_sim_4_final.innerText = "";
             }
 
 
@@ -2616,16 +2663,19 @@
                 let select_corresp_auto_devolvida_nao = document.getElementById("select_corresp_auto_devolvida_nao");
                 let span_corresp_auto_devolvida_nao_2 = document.getElementById("span_corresp_auto_devolvida_nao_2");
                 let input_corresp_auto_devolvida_nao_1 = document.getElementById("input_corresp_auto_devolvida_nao_1");
+                let span_corresp_auto_devolvida_nao_3 = document.getElementById("span_corresp_auto_devolvida_nao_3");
 
                 let span_corresp_auto_devolvida_nao_1_final = document.getElementById("span_corresp_auto_devolvida_nao_1_final");
                 let select_corresp_auto_devolvida_nao_final = document.getElementById("select_corresp_auto_devolvida_nao_final");
                 let span_corresp_auto_devolvida_nao_2_final = document.getElementById("span_corresp_auto_devolvida_nao_2_final");
                 let input_corresp_auto_devolvida_nao_1_final = document.getElementById("input_corresp_auto_devolvida_nao_1_final");
+                let span_corresp_auto_devolvida_nao_3_final = document.getElementById("span_corresp_auto_devolvida_nao_3_final");
 
                 span_corresp_auto_devolvida_nao_1_final.innerText = span_corresp_auto_devolvida_nao_1.innerText;
                 select_corresp_auto_devolvida_nao_final.innerText = select_corresp_auto_devolvida_nao.options[select_corresp_auto_devolvida_nao.selectedIndex].textContent;
                 span_corresp_auto_devolvida_nao_2_final.innerText = span_corresp_auto_devolvida_nao_2.innerText;
                 input_corresp_auto_devolvida_nao_1_final.innerText = input_corresp_auto_devolvida_nao_1.value;
+                span_corresp_auto_devolvida_nao_3_final.innerText = span_corresp_auto_devolvida_nao_3.innerText;
 
             } else {
                 console.log("Houve devolução de correspondência? A opção 'Não' não está selecionada.");
@@ -2633,6 +2683,8 @@
                 select_corresp_auto_devolvida_nao_final.innerText = "";
                 span_corresp_auto_devolvida_nao_2_final.innerText = "";
                 input_corresp_auto_devolvida_nao_1_final.innerText = "";
+                span_corresp_auto_devolvida_nao_3_final.innerText = "";
+
             }
 
 
@@ -2814,17 +2866,19 @@
                 let input_somente_regularizacao_checked_1 = document.getElementById("input_somente_regularizacao_checked_1");
                 let span_somente_regularizacao_checked_2 = document.getElementById("span_somente_regularizacao_checked_2");
                 let input_somente_regularizacao_checked_2 = document.getElementById("input_somente_regularizacao_checked_2");
+                let span_somente_regularizacao_checked_3 = document.getElementById("span_somente_regularizacao_checked_3");
 
                 let span_somente_regularizacao_checked_1_final = document.getElementById("span_somente_regularizacao_checked_1_final");
                 let input_somente_regularizacao_checked_1_final = document.getElementById("input_somente_regularizacao_checked_1_final");
                 let span_somente_regularizacao_checked_2_final = document.getElementById("span_somente_regularizacao_checked_2_final");
                 let input_somente_regularizacao_checked_2_final = document.getElementById("input_somente_regularizacao_checked_2_final");
+                let span_somente_regularizacao_checked_3_final = document.getElementById("span_somente_regularizacao_checked_3_final");
 
                 span_somente_regularizacao_checked_1_final.innerText = span_somente_regularizacao_checked_1.innerText;
                 input_somente_regularizacao_checked_1_final.innerText = input_somente_regularizacao_checked_1.value;
                 span_somente_regularizacao_checked_2_final.innerText = span_somente_regularizacao_checked_2.innerText;
                 input_somente_regularizacao_checked_2_final.innerText = input_somente_regularizacao_checked_2.value;
-
+                span_somente_regularizacao_checked_3_final.innerText = span_somente_regularizacao_checked_3.innerText;
 
                 // elemento deve aparecer em analises e considerações
                 let p_somente_regularizacao_checked_resolucoes_1 = document.getElementById("p_somente_regularizacao_checked_resolucoes_1");
@@ -2842,6 +2896,7 @@
                 input_somente_regularizacao_checked_1_final.innerText = "";
                 span_somente_regularizacao_checked_2_final.innerText = "";
                 input_somente_regularizacao_checked_2_final.innerText = "";
+                span_somente_regularizacao_checked_3_final.innerText = "";
                 p_somente_regularizacao_checked_resolucoes_1_final.innerText = "";
                 p_somente_regularizacao_checked_resolucoes_2_final.innerText = "";
             }
@@ -2859,16 +2914,19 @@
                 let input_somente_pagamento_multa_checked_1 = document.getElementById("input_somente_pagamento_multa_checked_1");
                 let span_somente_pagamento_multa_checked_2 = document.getElementById("span_somente_pagamento_multa_checked_2");
                 let input_somente_pagamento_multa_checked_2 = document.getElementById("input_somente_pagamento_multa_checked_2");
+                let span_somente_pagamento_multa_checked_3 = document.getElementById("span_somente_pagamento_multa_checked_3");
 
                 let span_somente_pagamento_multa_checked_1_final = document.getElementById("span_somente_pagamento_multa_checked_1_final");
                 let input_somente_pagamento_multa_checked_1_final = document.getElementById("input_somente_pagamento_multa_checked_1_final");
                 let span_somente_pagamento_multa_checked_2_final = document.getElementById("span_somente_pagamento_multa_checked_2_final");
                 let input_somente_pagamento_multa_checked_2_final = document.getElementById("input_somente_pagamento_multa_checked_2_final");
+                let span_somente_pagamento_multa_checked_3_final = document.getElementById("span_somente_pagamento_multa_checked_3_final");
 
                 span_somente_pagamento_multa_checked_1_final.innerText = span_somente_pagamento_multa_checked_1.innerText;
                 input_somente_pagamento_multa_checked_1_final.innerText = input_somente_pagamento_multa_checked_1.value;
                 span_somente_pagamento_multa_checked_2_final.innerText = span_somente_pagamento_multa_checked_2.innerText;
                 input_somente_pagamento_multa_checked_2_final.innerText = input_somente_pagamento_multa_checked_2.value;
+                span_somente_pagamento_multa_checked_3_final.innerText = span_somente_pagamento_multa_checked_3.innerText;
 
                 // elemento deve aparecer em analises e considerações
                 let p_somente_pagamento_multa_checked_resolucoes_1 = document.getElementById("p_somente_pagamento_multa_checked_resolucoes_1");
@@ -2909,13 +2967,13 @@
 
 
 
-
             } else {
 
                 span_somente_pagamento_multa_checked_1_final.innerText = "";
                 input_somente_pagamento_multa_checked_1_final.innerText = "";
                 span_somente_pagamento_multa_checked_2_final.innerText = "";
                 input_somente_pagamento_multa_checked_2_final.innerText = "";
+                span_somente_pagamento_multa_checked_3_final.innerText = "";
 
                 p_somente_pagamento_multa_checked_resolucoes_1_final.innerText = "";
                 p_somente_pagamento_multa_checked_resolucoes_2_final.innerText = "";
@@ -2923,9 +2981,6 @@
                 p_somente_pagamento_multa_checked_resolucoes_4_final.innerText = "";
 
                 span_multa_paga_voto_final.innerText = "";
-
-
-
 
             }
 
